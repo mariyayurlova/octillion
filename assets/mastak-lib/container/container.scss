@@ -33,7 +33,11 @@ $COLUMNS : 12;
         }
 
         @include hd {
-            max-width : $MAX-WIDTH_HD;
+            max-width    : unset;
+            padding   : {
+                left  : 4rem;
+                right : 4rem;
+            }
         }
     }
 

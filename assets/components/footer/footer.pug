@@ -1,49 +1,20 @@
 mixin footer()
     +b.FOOTER.footer
-        +e.inner.container.pt-10.pb-10.pt-sm-40.pb-sm-40
-            .row
-                .col-12.col-sm-3
-                    +e.logo_link(href='/')
-                        +e.logo_link-image(src=require('./../images/footer-logo.png'), alt='Seminar4U')
-                .col-12.col-sm-3.pt-10.pt-sm-00
-                    +e.menu
-                        +e.title.pt-05.pb-05.pt-sm-00.pb-sm-00 Меню
-                        +e.UL.menu_list
-                            +e.menu_list-item._active
-                                a(href="#") О компании
-                            +e.menu_list-item
-                                a(href="#") Календарь семинаров
-                            +e.menu_list-item
-                                a(href="#") Магазин
-                .col-12.col-sm-3.pt-10.pt-sm-00
-                    +e.contacts
-                        +e.title.pt-05.pb-05.pt-sm-00.pb-sm-00 Контакты
-                        +e.contacts_text
-                            +e.contacts_text-image(src=require('./../images/velcom.png'), alt='Velcom')
-                            a(href="tel:+375293404483") +375 (29) 340 44 83
-                        +e.contacts_text
-                            +e.contacts_text-image(src=require('./../images/mts.png'), alt='Velcom')
-                            a(href="tel:+375333004483") +375 (33) 300 44 83
-                        +e.contacts_text
-                            +e.contacts_text-image(src=require('./../images/email.png'), alt='Velcom')
-                            a(href="tel:info@spplaw.by") info@spplaw.by
-                        +e.contacts_text
-                            a(href="tel:info@spplaw.by")
-                                +e.soc(src=require('./../images/soc2.png'), alt='Velcom')
-                            a(href="tel:info@spplaw.by")
-                                +e.soc(src=require('./../images/soc3.png'), alt='Velcom')
-                .col-12.col-sm-3.pt-10.pt-sm-00
-                    +e.address
-                        +e.title.pt-05.pb-05.pt-sm-00.pb-sm-00 Адрес
-                        +e.address_text Республика Беларусь, 220034, г. Минск, ул. Фрунзе, 3, комн. 203.
-                        +e.address_text Режим работы: 9:00-18:00
-                        +e.address_image(src=require('./../images/logo-payment-system.png'), alt='Payment')
-            +e.copyright.pt-10.pt-sm-20
-                +e.copyright_text © 2019. Все права защищены.  УНП 805090058
-                +e.copyright_development(href="#")
-                    +e.SPAN.copyright_development-text Разработка сайта
-                    +e.IMG.copyright_development-image(src=require("./../images/develop.svg"), alt="mastak")
-
+        +e.container.swiper-container
+            +e.wrapper.swiper-wrapper
+                +e.slide.swiper-slide
+                    +e.slide-content
+                        +e.SPAN.title юридическая защита
+                        +e.SPAN.description в Минске
+                        +e.P.text Юридическая компания, оказывающая широкий спектр услуг. Наши эксперты имеют большой опыт и состоят в Коллегиях адвокатов Минска. Мы работаем честно — прозрачные условия договора и ценообразования. Наши принципы определяют качество работы. Но мы не беремся за заведомо проигрышные дела.
+                    +e.image(style=`background-image:url(${require("./../images/slider.png")})`)
+                +e.slide.swiper-slide
+                    +e.slide-content
+                        +e.SPAN.title юридическая защита2
+                        +e.SPAN.description в Минске
+                        +e.P.text Юридическая компания, оказывающая широкий спектр услуг. Наши эксперты имеют большой опыт и состоят в Коллегиях адвокатов Минска. Мы работаем честно — прозрачные условия договора и ценообразования. Наши принципы определяют качество работы. Но мы не беремся за заведомо проигрышные дела.
+                    +e.image(style=`background-image:url(${require("./../images/slider.png")})`)
+            +e.pagination.swiper-pagination
 
 
 
