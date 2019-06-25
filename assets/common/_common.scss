@@ -19,6 +19,7 @@ body {
     display        : flex;
     flex-direction : column;
     min-height     : 100vh;
+    background: linear-gradient(351.84deg, rgba(236, 238, 241, 0.376925) -5.45%, rgba(83, 103, 128, 0.0433933) 89.55%);
 
     &__h_100vh {
         height : 100vh;
