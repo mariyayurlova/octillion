@@ -8,9 +8,16 @@
 
 .tap{
     display: none;
+    overflow: hidden;
 
     @include md{
         display: block;
+    }
+
+    @include hd{
+        .container{
+            padding-left: 2rem;
+        }
     }
 
 }
@@ -123,6 +130,7 @@
         text-transform: uppercase;
         color: #536780;
         padding-left: 1.5rem;
+        cursor: pointer;
 
         @include hd{
             font-size: 20px;

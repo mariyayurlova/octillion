@@ -7,19 +7,23 @@ mixin homeSlider()
                     +e.wrapper.swiper-wrapper
                         +e.slide.swiper-slide
                             +e.slide-content
-                                +e.SPAN.title юридическая защита
-                                +e.SPAN.description в Минске
-                                +e.P.text Юридическая компания, оказывающая широкий спектр услуг. Наши эксперты имеют большой опыт и состоят в Коллегиях адвокатов Минска. Мы работаем честно — прозрачные условия договора и ценообразования. Наши принципы определяют качество работы. Но мы не беремся за заведомо проигрышные дела.
-                            +e.image(style=`background-image:url(${require("./../images/slider.png")})`)
-                        +e.slide.swiper-slide
-                            +e.slide-content
                                 +e.SPAN.title юридическая защита2
                                 +e.SPAN.description в Минске
                                 +e.P.text Юридическая компания, оказывающая широкий спектр услуг. Наши эксперты имеют большой опыт и состоят в Коллегиях адвокатов Минска. Мы работаем честно — прозрачные условия договора и ценообразования. Наши принципы определяют качество работы. Но мы не беремся за заведомо проигрышные дела.
                             +e.image(style=`background-image:url(${require("./../images/slider.png")})`)
+                        +e.slide.swiper-slide.video
+                            +e.slide-content
+                                +e.SPAN.title юридическая защита
+                                +e.SPAN.description в Минске
+                                +e.P.text Юридическая компания, оказывающая широкий спектр услуг. Наши эксперты имеют большой опыт и состоят в Коллегиях адвокатов Минска. Мы работаем честно — прозрачные условия договора и ценообразования. Наши принципы определяют качество работы. Но мы не беремся за заведомо проигрышные дела.
+                            +e.image
+                                +e.VIDEO.video-slide(loop muted autoplay)
+                                    +e.SOURCE.source-slide(src=require('./../video/videoFon.mp4') type="video/mp4")
+                                +e.background
                     +e.pagination.swiper-pagination
             +e.slide-item.section(id="servicesSection") Section 2
-            +e.slide-item.section(id="teamSection") Section 3
+            +e.slide-item.section(id="teamSection")
+                +team()
             +e.slide-item.section(id="blogSection") Section 4
             +e.slide-item.section(id="contactSection") Section 5
 

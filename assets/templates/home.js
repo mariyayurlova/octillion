@@ -8,6 +8,7 @@ import './../components/header/header';
 import './../components/footer/footer';
 import './../components/menu/menu';
 import './../components/homeSlider/homeSlider';
+import './../components/team/team';
 
 
 
