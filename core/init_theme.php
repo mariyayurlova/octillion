@@ -4,9 +4,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit();
 }
 
-add_action( 'after_setup_theme', 'zankoav_theme_init' );
+add_action( 'after_setup_theme', 'mastak_theme_init' );
 
-function zankoav_theme_init() {
+function mastak_theme_init() {
 	/**
 	 * add title tag auto
 	 */
