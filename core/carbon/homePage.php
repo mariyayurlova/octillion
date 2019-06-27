@@ -7,7 +7,7 @@
 	add_action( 'carbon_fields_register_fields', 'crb_home_page_settings' );
 	function crb_home_page_settings(){
         $lang = Lang::LANGUAGES;
-        Container::make( 'post_meta', "Контент" )
+        Container::make( 'post_meta', "Слайдер" )
             ->where( 'post_type', '=', 'page' )
             ->where( 'post_template', '=', 'template-home.php' )
             ->add_fields(
@@ -64,10 +64,35 @@
                         )
                         ->set_layout( "tabbed-horizontal" ) ,
                 ] );
-
+        Container::make( 'post_meta', "Команда" )
+            ->where( 'post_type', '=', 'page' )
+            ->where( 'post_template', '=', 'template-home.php' )
+            ->add_fields(
+                [
+                    Field::make( 'complex', 'member_list', 'Список мемберов' )
+                        ->add_fields( 'member', [
+                                Field::make( 'select', 'member_id', 'Выберите мембера' )
+                                    ->add_options( 'members_list' ),
+                            ]
+                        )->set_layout( "tabbed-horizontal" ) ,
+                ]
+            );
 	}
 	
 	add_action( 'after_setup_theme', 'crb_home_page_settings_load' );
 	function crb_home_page_settings_load(){
 		\Carbon_Fields\Carbon_Fields::boot();
 	}
+
+    function members_list(){
+    $my_query   = new WP_Query();
+    $query_members = $my_query->query( [
+        'post_type' => 'member',
+    ] );
+
+    $member_list = [];
+    foreach($query_members as $member) {
+        $member_list[ $member->ID ] = $member->post_title;
+    }
+    return $member_list;
+}

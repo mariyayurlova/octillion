@@ -17,11 +17,13 @@
                 Field::make( 'text', 'crb_member_position_ru', 'Должнасть' ),
                 Field::make( 'textarea', 'crb_member_short_desc_ru', 'Краткое описание' )
                     ->set_rows( 3 ),
+                Field::make( 'rich_text', 'crb_member_desc_ru', 'Полное описание' ),
                 Field::make( 'separator', 'separator_post_arh_title_'.$lang[1], strtoupper($lang[1])),
                 Field::make( 'text', 'crb_member_name_en', 'Имя' ),
                 Field::make( 'text', 'crb_member_position_en', 'Должнасть' ),
                 Field::make( 'textarea', 'crb_member_short_desc_en', 'Краткое описание' )
                     ->set_rows( 3 ),
+                Field::make( 'rich_text', 'crb_member_desc_en', 'Полное описание' ),
 //                Field::make( 'text', 'crb_member_name', 'Имя' ),
 //                Field::make( 'text', 'crb_member_position', 'Должнасть' ),
 			] );

@@ -7,8 +7,7 @@ $ln = Lang::current();
 ?>
 <div class="menu__lang-type mobile-lang">
     <div class="menu__lang-type-item">
-        <img class="menu__language-image" src="<?= Lang::LANG_META[$ln]['flag']?>"
-             alt="A1" title=""/>
+        <img class="menu__language-image" src="<?= Lang::LANG_META[$ln]['flag']?>" alt="A1" title=""/>
         <div class="menu__language-title"><?= strtoupper($ln) ?>
         </div>
     </div>

@@ -18,6 +18,10 @@ add_action('template_redirect', function () {
 //				wp_enqueue_style( 'home', Assets::getCss( 'home' ), false, null );
 //			}
 
+        if (is_singular("member")){
+            wp_enqueue_style( 'teamSingle', Assets::getCss( 'teamSingle' ), false, null );
+        }
+
 //        wp_enqueue_style('bootstrap', BASE_URL . '/src/css/bootstrap.css', false, null);
         wp_enqueue_style('style', BASE_URL . '/style.css', false, null);
 
