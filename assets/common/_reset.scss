@@ -2,6 +2,11 @@
     box-sizing: border-box;
     max-width: 100%;
     -webkit-font-smoothing: antialiased;
+    outline:none;
+}
+
+a{
+    cursor: pointer;
 }
 
 html, body, div, span, applet, object, iframe,

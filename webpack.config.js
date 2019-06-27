@@ -26,6 +26,8 @@ const THEME_NAME = 'octillion';
 let entries = {
     home: './home.js',
     teamSingle: './teamSingle.js',
+    service: './service.js',
+    serviceSingle: './serviceSingle.js',
 };
 
 let pugs = {
@@ -34,6 +36,12 @@ let pugs = {
     },
     teamSingle: {
         title: "teamSingle title"
+    },
+    service: {
+        title: "service title"
+    },
+    serviceSingle: {
+        title: "serviceSingle title"
     }
 };
 

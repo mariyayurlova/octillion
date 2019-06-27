@@ -21,7 +21,8 @@ mixin homeSlider()
                                     +e.SOURCE.source-slide(src=require('./../video/videoFon.mp4') type="video/mp4")
                                 +e.background
                     +e.pagination.swiper-pagination
-            +e.slide-item.section(id="servicesSection") Section 2
+            +e.slide-item.section(id="servicesSection")
+                +services()
             +e.slide-item.section(id="teamSection")
                 +team()
             +e.slide-item.section(id="blogSection") Section 4

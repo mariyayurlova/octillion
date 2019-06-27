@@ -30,6 +30,11 @@ $( ".menu__menu-item" ).click(function() {
     $('.team__slide').removeClass("team__slide_in")
 });
 
+$( ".header__menu-item" ).click(function() {
+    $('.team__slide').removeClass("team__slide_in")
+});
+
+
 
 $( "#team.menu__menu-item" ).click(function() {
     $('.team__slide').each(function(i){
@@ -38,5 +43,13 @@ $( "#team.menu__menu-item" ).click(function() {
             row.addClass('team__slide_in');
         }, 500*i);
     });
-    console.log("done");
+});
+
+$( "#team.header__menu-item" ).click(function() {
+    $('.team__slide').each(function(i){
+        var row = $(this);
+        setTimeout(function() {
+            row.addClass('team__slide_in');
+        }, 500*i);
+    });
 });

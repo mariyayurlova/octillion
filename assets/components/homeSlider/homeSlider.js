@@ -22,7 +22,7 @@ $(document).ready(function () {
         direction: 'horizontal',
         autoplay: true,
         effect: 'fade',
-        speed: 800,
+        speed: 3000,
         autoHeight: true,
     });
 

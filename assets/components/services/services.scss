@@ -37,7 +37,7 @@
         align-items: center;
         text-align: center;
         text-transform: uppercase;
-        color: #CDD6DE;
+        color: #F29100;
         z-index: 2;
 
         @include sm{
@@ -54,12 +54,12 @@
         position: relative;
 
         @include sm{
-            padding-top: 13rem;
+            padding-top: 11rem;
             min-height: calc( 100vh - 82px );
         }
 
         @include md{
-            padding-top: 12rem;
+            padding-top: 11rem;
         }
 
         @include lg{
@@ -67,43 +67,27 @@
         }
 
         @include hd{
-            padding-top: 16rem;
+            padding-top: 10rem;
         }
 
         @include xhd{
-            padding-top: 22rem;
+            padding-top: 15rem;
         }
 
     }
 
     &__slide-title{
         font-family: "Open Sans", sans-serif;
-        font-style: normal;
         font-weight: bold;
         font-size: 22px;
         line-height: 30px;
-        width: 120px;
+        width: 290px;
         color: #536780;
 
         @include xhd{
             font-size: 30px;
         }
 
-    }
-
-    &__slide-subtitle{
-        font-family: "Open Sans", sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 22px;
-        color: #F29100;
-        padding-top: .5rem;
-        padding-bottom: 1rem;
-
-        @include xhd{
-            font-size: 26px;
-        }
     }
 
     &__slide-text{
@@ -113,14 +97,13 @@
         font-size: 14px;
         line-height: 19px;
         color: #7B838A;
+        margin-top: 1.5rem;
 
         @include sm{
-            width: 182px;
         }
 
         @include xhd{
             font-size: 20px;
-            width: 300px;
         }
     }
 
@@ -178,44 +161,38 @@
     &__slide{
         opacity: 0;
         transform: translateX(100px);
+        min-height: calc( 100vh - 82px );
 
 
         @include sm{
+            padding-left: 44px;
+            padding-right: 44px;
             min-height: calc( 100vh - 82px );
         }
 
         @include lg{
-            padding-left: .5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @include hd{
+            padding-left: 4rem;
+            padding-right: 4rem;
         }
 
         &:nth-child(3n+1){
-            background: #E3E7EC;
+            background: #FBFBFC;
             transition: background .5s;
-
-            &:hover{
-                background: #dde2e9;
-                transition: background .5s;
-            }
         }
 
         &:nth-child(3n-1){
-            background: #E8EBEE;
+            background: #F6F7F9;
             transition: background .5s;
-
-            &:hover{
-                background: #dadee2;
-                transition: background .5s;
-            }
         }
 
         &:nth-child(3n){
-            background: #F5F6F8;
+            background: #F4F6F7;
             transition: background .5s;
-
-            &:hover{
-                background: #eef0f5;
-                transition: background .5s;
-            }
         }
 
         .container{
@@ -238,49 +215,46 @@
     }
 
     &__slide-link{
-        background: #CDD6DE;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-top: 1rem;
-        display: block;
-        width: 105px;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.1px;
+        color: #7B838A;
+        margin-bottom: 1rem;
         position: relative;
-        z-index: 1;
+        padding-left: 2rem;
+
+        @include xhd{
+            font-size: 20px;
+            line-height: 20px;
+        }
 
         &:before{
             content: '';
-            width: 0;
-            height: 32px;
-            background: #F29100;
-            position: absolute;
-            top: 0;
+            background-image: url("./../../images/bull.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 21px;
+            height: 21px;
             left: 0;
-            z-index: 2;
+
+            position: absolute;
         }
 
-        &:hover{
-
-            &:before{
-                width: 125px;
-                transition: width 1s;
-            }
-
-        }
 
     }
 
-    &__slide-link-text{
+    &__slide-list{
+        padding-top: 1rem;
 
-        font-family: "Open Sans", sans-serif;
-        font-style: normal;
-        font-size: 16px;
-        line-height: 17px;
-        text-transform: lowercase;
-        color: #ffffff;
-        z-index: 2;
-        position: relative;
+        @include xhd{
+            padding-top: 2rem;
+        }
 
     }
 
