@@ -1,0 +1,37 @@
+mixin menu-inner()
+    +b.menu-inner.tap
+        .container
+            +e.menu
+                .container
+                    +e.menu-list
+                        +e.A.menu-item.unbutton.menu-inner__menu-item_active(id="home" href="#homeSection") главная
+                        +e.A.menu-item.unbutton(id="services" href="#servicesSection") услуги
+                        +e.A.menu-item.unbutton(id="team" href="#teamSection") команда
+                        +e.A.menu-item.unbutton(id="blog" href="#blogSection") блог
+                        +e.A.menu-item.unbutton(id="contact" href="#contactSection") контакты
+                    +e.UL.menu-soc
+                        +e.LI.menu-soc-item
+                            +e.A.menu-soc-link(href="")
+                                +e.menu-image(src=require('./../images/fb.png'), alt='A1')
+                        +e.LI.menu-soc-item
+                            +e.A.menu-soc-link(href="")
+                                +e.menu-image(src=require('./../images/in.png'), alt='A1')
+                        +e.LI.menu-soc-item
+                            +e.A.menu-soc-link(href="")
+                                +e.menu-image(src=require('./../images/vk.png'), alt='A1')
+                        +e.LI.menu-soc-item
+                            +e.A.menu-soc-link(href="")
+                                +e.menu-image(src=require('./../images/inst.png'), alt='A1')
+                    +e.lang-type.mobile-lang
+                        +e.lang-type-item
+                            +e.language-image(src=require('./../images/rus.png'), alt='A1')
+                            +e.language-title рус
+                        +e.language.mob
+                            +e.A.language-item(href="")
+                                +e.language-image(src=require('./../images/rus.png'), alt='A1')
+                                +e.language-title рус
+                            +e.A.language-item(href="")
+                                +e.language-image(src=require('./../images/eng.png'), alt='A1')
+                                +e.language-title eng
+
+

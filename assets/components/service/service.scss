@@ -1,0 +1,310 @@
+@import "./../../common/constants";
+
+.service{
+
+    width: 100%;
+    display: flex;
+
+
+    @include md{
+        max-height: calc( 100vh - 82px );
+    }
+
+
+
+    &__content{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+
+
+        @include md{
+            width: calc( 100vw - 256px );
+
+        }
+    }
+
+    &__button-prev{
+        background-image: url(../../images/arr1.png);
+        width: 49px;
+        height: 40px;
+        background-size: 100% 100%;
+    }
+
+    &__button-next{
+        background-image: url(../../images/arr2.png);
+        width: 49px;
+        height: 40px;
+        background-size: 100% 100%;
+
+    }
+
+    &__arrow-link-right{
+        right: 0px;
+        top : 0px;
+        position: absolute;
+        z-index: 2;
+        width: 49px;
+        height: 40px;
+    }
+
+    &__arrow-link-left{
+        left: 0px;
+        top : 0px;
+        position: absolute;
+        z-index: 2;
+        width: 49px;
+        height: 40px;
+    }
+
+    &__title{
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 39px;
+        line-height: 48px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #F29100;
+
+        @include sm{
+            font-size: 84px;
+            line-height: 103px;
+        }
+
+    }
+
+    &__service-about{
+        padding-top: .5rem;
+
+        @include sm{
+            max-height: calc( 100vh - 140px );
+            height: calc( 100vh - 82px );
+        }
+
+        @include md{
+            height: calc( 100vh - 82px );
+        }
+    }
+
+    &__service-about-content{
+
+        @include sm{
+            max-width: 100%;
+            padding-top: 1rem;
+        }
+
+        @include md{
+            padding-top: 0rem;
+        }
+
+        @include lg{
+
+            padding-top: 0rem;
+        }
+
+        @include hd{
+            padding-top: 4rem;
+
+        }
+
+        @include xhd{
+            padding-top: 8rem;
+
+        }
+
+    }
+
+    &__service-about-content-title{
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 30px;
+        color: #536780;
+
+        @include hd{
+            font-size: 30px;
+        }
+
+    }
+
+
+    &__service-about-content-text{
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #7B838A;
+        padding-top: 1rem;
+
+        @include hd{
+            font-size: 20px;
+        }
+
+        @include xhd{
+            margin-bottom: 4rem;
+        }
+    }
+
+
+
+
+    &__service-about-content-files{
+        margin-top: 1.5rem;
+    }
+
+    &__files-item{
+        display: flex;
+        align-items: center;
+        margin-bottom: .5rem;
+    }
+
+
+    &__files-item-text{
+        font-family: "Open Sans",sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        color: #7B838A;
+
+        &:before{
+            content: '';
+            background-image: url("./../../images/pdf.svg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 20px;
+            height: 23px;
+            margin-right: 1rem;
+        }
+
+    }
+
+
+
+    &__service-about-content-link{
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.1px;
+        color: #7B838A;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 2rem;
+
+        @include xhd{
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        &:before{
+            content: '';
+            background-image: url("./../../images/bull.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 21px;
+            height: 21px;
+            left: 0;
+
+            position: absolute;
+        }
+
+
+    }
+
+    &__service-about-content-list{
+        padding-top: 1rem;
+
+
+        @include sm{
+            padding-top: 4rem;
+            width: 50%;
+        }
+        @include md{
+            padding-right: 1rem;
+            width: unset;
+        }
+
+        @include lg{
+            margin-right: 40px;
+        }
+
+        @include hd{
+            margin-right: 6rem;
+        }
+
+
+        @include xhd{
+            padding-top: 2rem;
+        }
+
+    }
+
+    &__service-about-content-type{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include md{
+            flex-wrap: unset;
+        }
+
+        @include lg{
+            justify-content: unset;
+
+        }
+
+    }
+
+
+
+
+}
+
+.type-service{
+
+    .container{
+
+        @include lg{
+            margin-left: 0rem;
+            margin-right: 2rem;
+            max-width: 100%;
+            width: 100%;
+        }
+
+    }
+
+    @include sm{
+        overflow: hidden;
+    }
+
+    @include md{
+        margin-left: 0rem;
+        margin-right: 0rem;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    @include lg{
+        margin-left: 2rem;
+        margin-right: 0rem;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    @include hd{
+        margin-right: 0rem;
+    }
+
+}

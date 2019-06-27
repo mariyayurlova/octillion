@@ -1,0 +1,55 @@
+@import "./../../common/constants";
+
+.breadcrubs{
+
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+
+    &__list{
+        display: flex;
+        align-items: center;
+    }
+
+    &__item{
+
+    }
+
+    &__link{
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #8D9BB0;
+        display: flex;
+        align-items: center;
+
+
+        &:after{
+            content: '';
+            background-image: url("./../../images/arrow-bread.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 13.5px;
+            height: 12px;
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+
+    }
+
+}
+
+.breadcrubs__item{
+
+    &:last-child{
+
+        .breadcrubs__link:after{
+            display: none;
+        }
+
+    }
+
+}

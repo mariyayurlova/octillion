@@ -1,0 +1,288 @@
+@import "./../../common/constants";
+
+.services{
+
+    &__inner{
+        position: relative;
+    }
+
+    &__button-prev{
+        background-image: url(../../images/arr1.png);
+        width: 49px;
+        height: 40px;
+        background-size: 100% 100%;
+        left: 0;
+        top : 22px;
+     }
+
+    &__button-next{
+        background-image: url(../../images/arr2.png);
+        width: 49px;
+        height: 40px;
+        background-size: 100% 100%;
+        right: 0px;
+        top : 22px;
+    }
+
+    &__title{
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 39px;
+        line-height: 48px;
+        position: absolute;
+        top : 0;
+        left: 60px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #F29100;
+        z-index: 2;
+
+        @include sm{
+            font-size: 84px;
+            line-height: 103px;
+            left: 76px;
+        }
+
+    }
+
+    &__slide-container{
+        padding-top: 4rem;
+
+        position: relative;
+
+        @include sm{
+            padding-top: 11rem;
+            min-height: calc( 100vh - 82px );
+        }
+
+        @include md{
+            padding-top: 11rem;
+        }
+
+        @include lg{
+            padding-top: 7rem;
+        }
+
+        @include hd{
+            padding-top: 10rem;
+        }
+
+        @include xhd{
+            padding-top: 15rem;
+        }
+
+    }
+
+    &__slide-title{
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 30px;
+        width: 290px;
+        color: #536780;
+
+        @include xhd{
+            font-size: 30px;
+        }
+
+    }
+
+    &__slide-text{
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #7B838A;
+        margin-top: 1.5rem;
+
+        @include sm{
+        }
+
+        @include xhd{
+            font-size: 20px;
+        }
+    }
+
+    &__slide-image{
+        width: 167px;
+        height : auto;
+        display: block;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-top: 1rem;
+
+        @include sm{
+            position: absolute;
+            bottom: 0rem;
+            width: 278px;
+            left: unset;
+        }
+
+        @include md{
+            width: 222px;
+            right: -20px;
+        }
+
+        @include lg{
+            width: 191px;
+            right: 0px;
+        }
+
+        @include hd{
+            width: 303px;
+        }
+
+        @include xhd{
+            width: 440px;
+        }
+
+
+    }
+
+    &__slide-image-inner{
+        width: 100%;
+        height: auto;
+
+
+        @include sm{
+            position: absolute;
+            bottom: 0;
+        }
+
+    }
+
+    &__slide{
+        opacity: 0;
+        transform: translateX(100px);
+        min-height: calc( 100vh - 82px );
+
+
+        @include sm{
+            padding-left: 44px;
+            padding-right: 44px;
+            min-height: calc( 100vh - 82px );
+        }
+
+        @include lg{
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @include hd{
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        &:nth-child(3n+1){
+            background: #FBFBFC;
+            transition: background .5s;
+        }
+
+        &:nth-child(3n-1){
+            background: #F6F7F9;
+            transition: background .5s;
+        }
+
+        &:nth-child(3n){
+            background: #F4F6F7;
+            transition: background .5s;
+        }
+
+        .container{
+            padding-left: .5rem;
+            padding-right: 0;
+        }
+
+        &_in{
+            animation           : animSlideIn 1s .5s;
+            animation-fill-mode : forwards;
+        }
+
+        &_out{
+            animation           : animSlideOut 1s;
+            animation-fill-mode : backwards;
+        }
+
+
+
+    }
+
+    &__slide-link{
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.1px;
+        color: #7B838A;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 2rem;
+
+        @include xhd{
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        &:before{
+            content: '';
+            background-image: url("./../../images/bull.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 21px;
+            height: 21px;
+            left: 0;
+
+            position: absolute;
+        }
+
+
+    }
+
+    &__slide-list{
+        padding-top: 1rem;
+
+        @include xhd{
+            padding-top: 2rem;
+        }
+
+    }
+
+
+
+
+
+}
+
+
+@keyframes animSlideIn {
+    0% {
+        opacity : 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity : 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animSlideOut {
+    0% {
+        opacity : 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity : 0;
+        transform: translateX(100px);
+    }
+}

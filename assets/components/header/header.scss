@@ -1,6 +1,7 @@
 @import "./../../common/constants";
 
 .type{
+    width: 100%;
     padding   : {
         left  : 12px;
         right : 12px;
@@ -185,6 +186,7 @@
     &__lang-type{
         margin-left: 1rem;
         position: relative;
+        z-index: 2;
 
         &:before{
             content: '';
@@ -281,14 +283,14 @@
     }
 
     &__menu{
-        height: calc( 100vh - 72px );
+        height: calc( 100vh - 82px );
         min-height: 568px;
         z-index : 99;
         width: 256px;
         background: #CDD6DE;
         position: absolute;
         left: 0;
-        margin-top: .5rem;
+        top : 66px;
         padding-top: 2rem;
         transform: translateX(-100%);
 
