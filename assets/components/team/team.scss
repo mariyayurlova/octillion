@@ -1,0 +1,314 @@
+@import "./../../common/constants";
+
+.team{
+
+    &__inner{
+        position: relative;
+    }
+
+    &__button-prev{
+        background-image: url(../../images/arr1.png);
+        width: 49px;
+        height: 40px;
+        background-size: 100% 100%;
+        left: 0;
+        top : 22px;
+     }
+
+    &__button-next{
+        background-image: url(../../images/arr2.png);
+        width: 49px;
+        height: 40px;
+        background-size: 100% 100%;
+        right: 0px;
+        top : 22px;
+    }
+
+    &__title{
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 39px;
+        line-height: 48px;
+        position: absolute;
+        top : 0;
+        left: 60px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #CDD6DE;
+        z-index: 2;
+
+        @include sm{
+            font-size: 84px;
+            line-height: 103px;
+            left: 76px;
+        }
+
+    }
+
+    &__slide-container{
+        padding-top: 4rem;
+
+        position: relative;
+
+        @include sm{
+            padding-top: 13rem;
+            min-height: calc( 100vh - 82px );
+        }
+
+        @include md{
+            padding-top: 12rem;
+        }
+
+        @include lg{
+            padding-top: 7rem;
+        }
+
+        @include hd{
+            padding-top: 16rem;
+        }
+
+        @include xhd{
+            padding-top: 22rem;
+        }
+
+    }
+
+    &__slide-title{
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 30px;
+        width: 120px;
+        color: #536780;
+
+        @include xhd{
+            font-size: 30px;
+        }
+
+    }
+
+    &__slide-subtitle{
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        color: #F29100;
+        padding-top: .5rem;
+        padding-bottom: 1rem;
+
+        @include xhd{
+            font-size: 26px;
+        }
+    }
+
+    &__slide-text{
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #7B838A;
+
+        @include sm{
+            width: 182px;
+        }
+
+        @include xhd{
+            font-size: 20px;
+            width: 300px;
+        }
+    }
+
+    &__slide-image{
+        width: 167px;
+        height : auto;
+        display: block;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-top: 1rem;
+
+        @include sm{
+            position: absolute;
+            bottom: 0rem;
+            width: 278px;
+            left: unset;
+        }
+
+        @include md{
+            width: 222px;
+            right: -20px;
+        }
+
+        @include lg{
+            width: 191px;
+            right: 0px;
+        }
+
+        @include hd{
+            width: 303px;
+        }
+
+        @include xhd{
+            width: 440px;
+        }
+
+
+    }
+
+    &__slide-image-inner{
+        width: 100%;
+        height: auto;
+
+
+        @include sm{
+            position: absolute;
+            bottom: 0;
+        }
+
+    }
+
+    &__slide{
+        opacity: 0;
+        transform: translateX(100px);
+
+
+        @include sm{
+            min-height: calc( 100vh - 82px );
+        }
+
+        @include lg{
+            padding-left: .5rem;
+        }
+
+        &:nth-child(3n+1){
+            background: #E3E7EC;
+            transition: background .5s;
+
+            &:hover{
+                background: #dde2e9;
+                transition: background .5s;
+            }
+        }
+
+        &:nth-child(3n-1){
+            background: #E8EBEE;
+            transition: background .5s;
+
+            &:hover{
+                background: #dadee2;
+                transition: background .5s;
+            }
+        }
+
+        &:nth-child(3n){
+            background: #F5F6F8;
+            transition: background .5s;
+
+            &:hover{
+                background: #eef0f5;
+                transition: background .5s;
+            }
+        }
+
+        .container{
+            padding-left: .5rem;
+            padding-right: 0;
+        }
+
+        &_in{
+            animation           : animSlideIn 1s .5s;
+            animation-fill-mode : forwards;
+        }
+
+        &_out{
+            animation           : animSlideOut 1s;
+            animation-fill-mode : backwards;
+        }
+
+
+
+    }
+
+    &__slide-link{
+        background: #CDD6DE;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 1rem;
+        display: block;
+        width: 105px;
+        position: relative;
+        z-index: 1;
+
+        &:before{
+            content: '';
+            width: 0;
+            height: 32px;
+            background: #F29100;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        &:hover{
+
+            &:before{
+                width: 125px;
+                transition: width 1s;
+            }
+
+        }
+
+    }
+
+    &__slide-link-text{
+
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 17px;
+        text-transform: lowercase;
+        color: #ffffff;
+        z-index: 2;
+        position: relative;
+
+    }
+
+
+
+
+
+}
+
+
+@keyframes animSlideIn {
+    0% {
+        opacity : 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity : 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animSlideOut {
+    0% {
+        opacity : 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity : 0;
+        transform: translateX(100px);
+    }
+}

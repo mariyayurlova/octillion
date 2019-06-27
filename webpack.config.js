@@ -20,16 +20,20 @@
  13. npm install webpack-dev-server --save-dev
  *
  */
-const THEME_NAME = 'tikets';
+const THEME_NAME = 'octillion';
 
 
 let entries = {
     home: './home.js',
+    teamSingle: './teamSingle.js',
 };
 
 let pugs = {
     home: {
         title: "home title"
+    },
+    teamSingle: {
+        title: "teamSingle title"
     }
 };
 
