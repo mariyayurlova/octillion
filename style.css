@@ -1,0 +1,45 @@
+/*
+Theme Name: octillion
+Author: Androsov Alexandr
+Author URI:
+Version: 0.0.1
+*/
+/*html, body{*/
+/*    width: 100%;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.lang__link {*/
+/*    border: 1px solid #000e14;*/
+/*    border-radius: 4px;*/
+/*    padding: 0.3rem;*/
+/*    margin: 0.3rem;*/
+/*    text-decoration: none;*/
+/*    transition: all 0.5s;*/
+/*}*/
+
+/*.lang__link:hover {*/
+/*    color: white;*/
+/*    background-color: black;*/
+/*    transition: all 0.5s;*/
+/*}*/
+
+/*.lang__link_active {*/
+/*    color: #007a87;*/
+/*    background-color: gray;*/
+/*}*/
+
+/*.logo{*/
+/*    max-height: 50px;*/
+/*}*/
+/*.header{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-between;*/
+/*}*/
+/*.main-container{*/
+
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
