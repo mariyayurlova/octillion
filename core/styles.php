@@ -20,6 +20,12 @@ add_action('template_redirect', function () {
         if (is_singular("member")){
             wp_enqueue_style( 'teamSingle', Assets::getCss( 'teamSingle' ), false, null );
         }
+        if (is_singular("service")){
+            wp_enqueue_style( 'serviceSingle', Assets::getCss( 'serviceSingle' ), false, null );
+        }
+        if (is_tax( 'service_group' )){
+            wp_enqueue_style( 'service', Assets::getCss( 'service' ), false, null );
+        }
         wp_enqueue_style('style', BASE_URL . '/style.css', false, null);
 
     });

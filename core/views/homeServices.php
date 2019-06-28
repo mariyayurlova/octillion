@@ -1,7 +1,10 @@
 <?php
-
 $ln = Lang::current();
-$member_list = carbon_get_post_meta(get_the_ID(),'member_list');
+
+$terms = get_terms( [
+    'taxonomy' => 'service_group',
+    'hide_empty' => false,
+] );
 ?>
 <div class="services">
     <div class="services__inner">
@@ -9,84 +12,59 @@ $member_list = carbon_get_post_meta(get_the_ID(),'member_list');
         </div>
         <div class="services__container swiper-container">
             <div class="services__wrapper swiper-wrapper">
+
+                <?php foreach ($terms as $term):
+                    $term_name = $ln == 'ru' ? $term->name : carbon_get_term_meta($term->term_id,'group_name_'.$ln);
+                    $term_desc = $ln == 'ru' ? term_description( $term, 'service_group' ) : carbon_get_term_meta($term->term_id,'group_desc_'.$ln);
+                    /**
+                     * @var WP_Term $term
+                     */
+                    $args = [
+                        'post_type' => 'service',
+                        'tax_query' => [
+                            [
+                                'taxonomy' => 'service_group',
+                                'field' => 'slug',
+                                'terms' => $term->slug,
+                            ]
+                        ],
+                    ];
+                    $query = new WP_Query( $args );
+                ?>
                 <div class="services__slide swiper-slide">
                     <div class="container">
                         <div class="link" href="">
                             <div class="services__slide-container">
                                 <div class="services__slide-content">
-                                    <div class="services__slide-title">Для иностранных граждан
+                                    <div class="services__slide-title">
+                                        <a href="<?=get_term_link($term->term_id)?>"><?= $term_name ?></a>
                                     </div>
-                                    <div class="services__slide-text">Юридическая компания, оказывающая широкий спектр услуг. Наши эксперты имеют большой опыт и состоят в Коллегиях адвокатов Минска.
+                                    <div class="services__slide-text">
+                                        <?= $term_desc?>
                                     </div>
                                     <div class="services__slide-list"><ul>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Комплексная юридическая</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Поддержка менеджмента</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Бракоразводные процессы</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Сделки купли-продажи</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Наследственные дела</a>
-                                            </li>
+                                        <?php
+                                        // Цикл
+                                        if ( $query->have_posts() ) :
+                                            while ( $query->have_posts() ):
+                                                $query->the_post();
+                                                ?>
+                                                <li class="services__slide-item">
+                                                    <a class="services__slide-link" href="<?php the_permalink()?>"><?= the_title()?></a>
+                                                </li>
+                                            <?php
+                                            endwhile;
+                                        endif;
+                                        wp_reset_postdata();
+                                        ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="services__slide swiper-slide">
-                    <div class="container">
-                        <div class="link" href="">
-                            <div class="services__slide-container">
-                                <div class="services__slide-content">
-                                    <div class="services__slide-title">Для иностранных граждан
-                                    </div>
-                                    <div class="services__slide-text">Юридическая компания, оказывающая широкий спектр услуг. Наши эксперты имеют большой опыт и состоят в Коллегиях адвокатов Минска.
-                                    </div>
-                                    <div class="services__slide-list"><ul>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Комплексная юридическая</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Поддержка менеджмента</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Бракоразводные процессы</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Сделки купли-продажи</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Наследственные дела</a>
-                                            </li>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="services__slide swiper-slide">
-                    <div class="container">
-                        <div class="link" href="">
-                            <div class="services__slide-container">
-                                <div class="services__slide-content">
-                                    <div class="services__slide-title">Для иностранных граждан
-                                    </div>
-                                    <div class="services__slide-text">Юридическая компания, оказывающая широкий спектр услуг. Наши эксперты имеют большой опыт и состоят в Коллегиях адвокатов Минска.
-                                    </div>
-                                    <div class="services__slide-list"><ul>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Комплексная юридическая</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Поддержка менеджмента</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Бракоразводные процессы</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Сделки купли-продажи</a>
-                                            </li>
-                                            <li class="services__slide-item"><a class="services__slide-link" href="">Наследственные дела</a>
-                                            </li>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach;?>
+
             </div>
             <div class="services__button-next swiper-button-next">
             </div>

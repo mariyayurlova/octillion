@@ -1,38 +1,36 @@
 <?php
-	get_header();
-	
+get_header();
+$ln = Lang::current();
 
+$name = carbon_get_post_meta(get_the_ID(),"crb_service_name_".$ln);
+$content = carbon_get_post_meta(get_the_ID(),"crb_service_content_".$ln);
+
+get_template_part("/core/views/headerView")
 ?>
-	<div class="app">
-		<?php get_template_part( '/core/views/headerView' ); ?>
-		<main class="main main-container">
-            <?php get_template_part('/core/views/asideView'); ?>
-			<div class="container">
-				<h1 class="title title_grey title_default mt-20 mt-sm-40"><?= get_the_title(); ?></h1>
-
-                <div class="breadcrumbs">
-                    <a href="/" class="breadcrumb">home</a>
-                    <a href="<?= get_post_type_archive_link("service") ?>" class="breadcrumb">services</a>
-                    <a class="breadcrumb"></a>
-                    <span class="breadcrumb"><?= get_the_title(); ?></span>
+    <main class="main">
+        <div class="serviceSingle">
+            <?php get_template_part("/core/views/single_menu_tap")?>
+            <div class="container type-serviceSingle">
+                <div class="container">
+                    <p class="serviceSingle__title"><?= $name ?></p>
+                    <div class="breadcrubs">
+                        <ul class="breadcrubs__list">
+                            <li class="breadcrubs__item"><a class="breadcrubs__link" href="">услуги</a>
+                            </li>
+                            <li class="breadcrubs__item"><a class="breadcrubs__link" href="">для  физических лиц</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="serviceSingle__serviceSingle-about">
+                        <div class="serviceSingle__serviceSingle-about-content">
+                            <div class="serviceSingle__serviceSingle-about-content-text">
+                                <?php echo apply_filters( 'the_content', $content); ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-				<div class="row mt-20 mb-30 mt-sm-40 mb-sm-40 pb-sm-40">
-					<div class="col-12 col-offset-lg-2 col-lg-8">
-
-						<div class="editor-content">
-							<?php if (have_posts()):
-								while(have_posts()):
-									the_post();
-									the_content();
-								endwhile;
-							endif;?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<?php get_template_part( '/core/views/footerView' ); ?>
-	</div>
+            </div>
+        </div>
+    </main>
 <?php
-	get_footer();
+get_footer();

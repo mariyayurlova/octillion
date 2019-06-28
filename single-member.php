@@ -16,7 +16,6 @@ get_template_part("/core/views/headerView")
                     <div class="teamSingle__team-about">
                         <div class="teamSingle__team-about-content">
                             <?php
-                           // var_dump(get_post_meta(get_the_ID()));
                             if (have_posts()):
                                 while (have_posts()):
                                     the_post();

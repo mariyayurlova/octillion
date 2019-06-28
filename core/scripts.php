@@ -25,6 +25,12 @@ add_action('template_redirect', function () {
         if (is_singular("member")){
             wp_enqueue_script('teamSingle', Assets::getJs('teamSingle'), false, null, true);
         }
+        if (is_singular("service")){
+            wp_enqueue_script('serviceSingle', Assets::getJs('serviceSingle'), false, null, true);
+        }
+        if (is_tax( 'service_group' )){
+            wp_enqueue_script('service', Assets::getJs('service'), false, null, true);
+        }
 //        else {
 ////		    wp_enqueue_script('page', Assets::getJs('page'), false, null, true);
 //	    }
