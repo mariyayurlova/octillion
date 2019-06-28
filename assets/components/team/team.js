@@ -43,6 +43,7 @@ $( "#team.menu__menu-item" ).click(function() {
             row.addClass('team__slide_in');
         }, 500*i);
     });
+    console.log("done");
 });
 
 $( "#team.header__menu-item" ).click(function() {
@@ -52,4 +53,5 @@ $( "#team.header__menu-item" ).click(function() {
             row.addClass('team__slide_in');
         }, 500*i);
     });
+    console.log("done");
 });

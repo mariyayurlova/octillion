@@ -224,12 +224,12 @@
         }
 
         &_in{
-            animation           : animSlideIn 1s .5s;
+            animation           : animSlideIn4 1s .5s;
             animation-fill-mode : forwards;
         }
 
         &_out{
-            animation           : animSlideOut 1s;
+            animation           : animSlideOut4 1s;
             animation-fill-mode : backwards;
         }
 
@@ -291,7 +291,7 @@
 }
 
 
-@keyframes animSlideIn {
+@keyframes animSlideIn4 {
     0% {
         opacity : 0;
         transform: translateX(100px);
@@ -302,7 +302,7 @@
     }
 }
 
-@keyframes animSlideOut {
+@keyframes animSlideOut4 {
     0% {
         opacity : 1;
         transform: translateX(0);

@@ -10,6 +10,7 @@ import './../components/menu/menu';
 import './../components/homeSlider/homeSlider';
 import './../components/team/team';
 import './../components/services/services';
+import './../components/blog/blog';
 
 
 
