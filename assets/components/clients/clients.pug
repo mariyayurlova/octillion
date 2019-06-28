@@ -1,0 +1,22 @@
+mixin clients()
+    +b.clients
+        +menu-inner()
+        .container.type-clients
+            .container
+                +e.P.title наши клиенты
+                +breadcrub()
+                +e.clients-about
+                    +e.clients-about-content
+                        +e.A.clients-item(href="")
+                            +e.clients-image(src=require('./../images/cl1.png'), alt='A1')
+                        +e.A.clients-item(href="")
+                            +e.clients-image(src=require('./../images/cl2.png'), alt='A1')
+                        +e.A.clients-item(href="")
+                            +e.clients-image(src=require('./../images/cl3.png'), alt='A1')
+                        +e.A.clients-item(href="")
+                            +e.clients-image(src=require('./../images/cl4.png'), alt='A1')
+                        +e.A.clients-item(href="")
+                            +e.clients-image(src=require('./../images/cl5.png'), alt='A1')
+                        +e.A.clients-item(href="")
+                            +e.clients-image(src=require('./../images/cl6.png'), alt='A1')
+

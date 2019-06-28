@@ -245,7 +245,7 @@
         padding-bottom: 5px;
         margin-top: 1rem;
         display: block;
-        width: 105px;
+        width: 100px;
         position: relative;
         z-index: 1;
 
@@ -263,7 +263,7 @@
         &:hover{
 
             &:before{
-                width: 125px;
+                width: 120px;
                 transition: width 1s;
             }
 
@@ -275,7 +275,7 @@
 
         font-family: "Open Sans", sans-serif;
         font-style: normal;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 17px;
         text-transform: lowercase;
         color: #ffffff;

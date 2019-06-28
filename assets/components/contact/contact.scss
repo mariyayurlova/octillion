@@ -1,0 +1,218 @@
+@import "./../../common/constants";
+@import "../../../node_modules/og/css/og.css";
+
+.contact{
+
+    width: 100%;
+    display: flex;
+
+
+    @include md{
+        max-height: calc( 100vh - 82px );
+    }
+
+
+    &__globus{
+        width:100%;
+        max-height: calc( 100vh - 250px );
+        height: calc( 100vh - 250px );
+    }
+
+    &__arrow{
+        position: absolute; left:0; padding:10px;
+
+    }
+
+    &__left{
+        float:left; margin: 3px;
+    }
+
+    &__right{
+        float:left; margin: 3px;
+    }
+
+
+    &__content{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+
+
+        @include md{
+            width: calc( 100vw - 256px );
+
+        }
+    }
+
+    &__button-prev{
+        background-image: url(../../images/arr1.png);
+        width: 49px;
+        height: 40px;
+        background-size: 100% 100%;
+    }
+
+    &__button-next{
+        background-image: url(../../images/arr2.png);
+        width: 49px;
+        height: 40px;
+        background-size: 100% 100%;
+
+    }
+
+    &__arrow-link-right{
+        right: 0px;
+        top : 0px;
+        position: absolute;
+        z-index: 2;
+        width: 49px;
+        height: 40px;
+    }
+
+    &__arrow-link-left{
+        left: 0px;
+        top : 0px;
+        position: absolute;
+        z-index: 2;
+        width: 49px;
+        height: 40px;
+    }
+
+    &__title{
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 37px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #A3B0BB;
+        margin-bottom: 1rem;
+
+        @include sm{
+            font-size: 35px;
+            line-height: 37px;
+        }
+
+        @include lg{
+            padding-top: 2rem;
+        }
+        @include xhd{
+            padding-top: 4rem;
+        }
+
+
+    }
+
+    &__contact-about{
+        padding-top: .5rem;
+
+        @include sm{
+            max-height: calc( 100vh - 140px );
+            height: calc( 100vh - 82px );
+        }
+
+        @include md{
+            height: calc( 100vh - 82px );
+        }
+    }
+
+    &__contact-about-content{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+        @include sm{
+            max-width: 100%;
+            padding-top: 1rem;
+            justify-content: space-between;
+        }
+
+        @include md{
+            padding-top: 0rem;
+        }
+
+        @include lg{
+
+            padding-top: 0rem;
+        }
+
+        @include hd{
+            padding-top: 2rem;
+
+        }
+
+        @include xhd{
+            padding-top: 2rem;
+
+        }
+
+    }
+
+    &__contact-about-content-title{
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 37px;
+        color: #A3B0BB;
+
+        @include hd{
+            font-size: 35px;
+        }
+
+    }
+
+
+    &__contact-item{
+        width: 196px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+
+
+
+
+}
+
+.type-contact{
+
+    .container{
+
+        @include lg{
+            margin-left: 0rem;
+            margin-right: 2rem;
+            max-width: 100%;
+            width: 100%;
+        }
+
+    }
+
+    @include sm{
+        overflow: hidden;
+    }
+
+    @include md{
+        margin-left: 0rem;
+        margin-right: 0rem;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    @include lg{
+        margin-left: 2rem;
+        margin-right: 2rem;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    @include hd{
+        margin-right: 0rem;
+        margin-left: 0;
+        padding-left: unset;
+    }
+
+}
