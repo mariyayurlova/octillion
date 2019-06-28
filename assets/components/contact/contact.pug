@@ -1,0 +1,14 @@
+mixin contact()
+    +b.contact
+        +menu-inner()
+        .container.type-contact
+            .container
+                +e.P.title контакты
+                +breadcrub()
+                +e.contact-about
+                    +e.contact-about-content
+                        +e.globus(id="globus")
+                        .e.arrow
+                            BUTTON.left(id="btnOSM") OSM
+                            BUTTON.right(id="btnMQS") MapQuest Sat.
+

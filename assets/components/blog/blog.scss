@@ -49,6 +49,11 @@
         color: #A3B0BB;
         margin-bottom: 1.5rem;
 
+        @include sm{
+            font-size: 84px;
+            line-height: 103px;
+        }
+
     }
 
     &__about-content-text{

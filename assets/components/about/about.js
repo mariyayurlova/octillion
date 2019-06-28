@@ -4,10 +4,10 @@ import Swiper from "swiper";
 
 
 
-var swiper3 = new Swiper('.services__container', {
+var swiper4 = new Swiper('.about__container', {
     navigation: {
-        nextEl: '.services__button-next',
-        prevEl: '.services__button-prev',
+        nextEl: '.about__button-next',
+        prevEl: '.about__button-prev',
     },
     slidesPerView: 3,
     breakpointsInverse: true,
@@ -27,30 +27,28 @@ var swiper3 = new Swiper('.services__container', {
 
 
 $( ".menu__menu-item" ).click(function() {
-    $('.services__slide').removeClass("services__slide_in")
+    $('.about__slide').removeClass("about__slide_in")
 });
 
 $( ".header__menu-item" ).click(function() {
-    $('.services__slide').removeClass("services__slide_in")
+    $('.about__slide').removeClass("about__slide_in")
 });
 
 
-$( "#services.menu__menu-item" ).click(function() {
-    $('.services__slide').each(function(i){
+$( "#contact.menu__menu-item" ).click(function() {
+    $('.about__slide').each(function(i){
         var row = $(this);
         setTimeout(function() {
-            row.addClass('services__slide_in');
+            row.addClass('about__slide_in');
         }, 500*i);
     });
-    console.log("done");
 });
 
-$( "#services.header__menu-item" ).click(function() {
-    $('.services__slide').each(function(i){
+$( "#contact.header__menu-item" ).click(function() {
+    $('.about__slide').each(function(i){
         var row = $(this);
         setTimeout(function() {
-            row.addClass('services__slide_in');
+            row.addClass('about__slide_in');
         }, 500*i);
     });
-    console.log("done");
 });

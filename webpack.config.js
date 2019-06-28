@@ -28,6 +28,8 @@ let entries = {
     teamSingle: './teamSingle.js',
     service: './service.js',
     serviceSingle: './serviceSingle.js',
+    clients: './clients.js',
+    contact: './contact.js',
 };
 
 let pugs = {
@@ -42,6 +44,12 @@ let pugs = {
     },
     serviceSingle: {
         title: "serviceSingle title"
+    },
+    clients: {
+        title: "clients title"
+    },
+    contact: {
+        title: "contact title"
     }
 };
 

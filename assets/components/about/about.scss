@@ -1,6 +1,6 @@
 @import "./../../common/constants";
 
-.services{
+.about{
 
     &__inner{
         position: relative;
@@ -28,7 +28,7 @@
         font-family: "Gilroy";
         font-style: normal;
         font-weight: bold;
-        font-size: 39px;
+        font-size: 30px;
         line-height: 48px;
         position: absolute;
         top : 0;
@@ -37,7 +37,7 @@
         align-items: center;
         text-align: center;
         text-transform: uppercase;
-        color: #F29100;
+        color: #A3B0BB;
         z-index: 2;
 
         @include sm{
@@ -91,72 +91,26 @@
     }
 
     &__slide-text{
-        font-family: "Open Sans", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 19px;
-        color: #7B838A;
-        margin-top: 1.5rem;
 
-        @include sm{
-        }
+        p{
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: #7B838A;
+            margin-top: 1rem;
 
-        @include xhd{
-            font-size: 20px;
+            @include sm{
+            }
+
+            @include xhd{
+                font-size: 20px;
+            }
         }
     }
 
-    &__slide-image{
-        width: 167px;
-        height : auto;
-        display: block;
-        right: 0;
-        left: 0;
-        margin-left: auto;
-        margin-right: auto;
 
-        margin-top: 1rem;
-
-        @include sm{
-            position: absolute;
-            bottom: 0rem;
-            width: 278px;
-            left: unset;
-        }
-
-        @include md{
-            width: 222px;
-            right: -20px;
-        }
-
-        @include lg{
-            width: 191px;
-            right: 0px;
-        }
-
-        @include hd{
-            width: 303px;
-        }
-
-        @include xhd{
-            width: 440px;
-        }
-
-
-    }
-
-    &__slide-image-inner{
-        width: 100%;
-        height: auto;
-
-
-        @include sm{
-            position: absolute;
-            bottom: 0;
-        }
-
-    }
 
     &__slide{
         opacity: 0;
@@ -168,6 +122,11 @@
             padding-left: 44px;
             padding-right: 44px;
             min-height: calc( 100vh - 82px );
+
+            .container{
+                padding-left: .5rem;
+                padding-right: 0;
+            }
         }
 
         @include lg{
@@ -195,19 +154,11 @@
             transition: background .5s;
         }
 
-        .container{
-            padding-left: .5rem;
-            padding-right: 0;
-        }
+
 
         &_in{
-            animation           : animSlideIn 1s .5s;
+            animation           : animSlideIn5 1s .5s;
             animation-fill-mode : forwards;
-        }
-
-        &_out{
-            animation           : animSlideOut 1s;
-            animation-fill-mode : backwards;
         }
 
 
@@ -215,48 +166,16 @@
     }
 
     &__slide-link{
-        font-family: "Open Sans", sans-serif;
+        font-family: "Open Sans",sans-serif;
         font-style: normal;
-        font-weight: 600;
+        font-weight: bold;
         font-size: 14px;
-        line-height: 14px;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.1px;
-        color: #7B838A;
-        margin-bottom: 1rem;
-        position: relative;
-        padding-left: 2rem;
-
-        @include xhd{
-            font-size: 20px;
-            line-height: 20px;
-        }
-
-        &:before{
-            content: '';
-            background-image: url("./../../images/bull.png");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 21px;
-            height: 21px;
-            left: 0;
-
-            position: absolute;
-        }
-
-
+        line-height: 19px;
+        color: #A3B0BB;
+        margin-top: 1.5rem;
+        display: block;
     }
 
-    &__slide-list{
-        padding-top: 1rem;
-
-        @include xhd{
-            padding-top: 2rem;
-        }
-
-    }
 
 
 
@@ -265,7 +184,7 @@
 }
 
 
-@keyframes animSlideIn {
+@keyframes animSlideIn5 {
     0% {
         opacity : 0;
         transform: translateX(100px);
@@ -276,7 +195,7 @@
     }
 }
 
-@keyframes animSlideOut {
+@keyframes animSlideOut5 {
     0% {
         opacity : 1;
         transform: translateX(0);

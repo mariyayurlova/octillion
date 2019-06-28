@@ -7,12 +7,11 @@ import './../mastak-lib/loader/loader';
 import './../components/header/header';
 import './../components/footer/footer';
 import './../components/menu/menu';
+import './../components/menu-inner/menu-inner';
 import './../components/homeSlider/homeSlider';
 import './../components/team/team';
-import './../components/services/services';
-import './../components/blog/blog';
-import './../components/about/about';
-
-
-
-
+import './../components/teamSingle/teamSingle';
+import './../components/service/service';
+import './../components/breadcrub/breadcrub';
+import './../components/serviceSingle/serviceSingle';
+import './../components/clients/clients';
