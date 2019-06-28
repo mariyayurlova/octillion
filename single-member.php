@@ -12,7 +12,7 @@ get_template_part("/core/views/headerView")
             <div class="container type-team">
                 <p class="teamSingle__title"><?= Lang::get("команда") ?></p>
                 <?php get_template_part("/core/views/prevNextPartner") ?>
-               <div class="container">
+                <div class="container">
                     <div class="teamSingle__team-about">
                         <div class="teamSingle__team-about-content">
                             <?php

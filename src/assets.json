@@ -1,14 +1,21 @@
 {
   "common": {
-    "js": "/src/js/common.2360a3dbacbeb662e7b1.min.js",
-    "css": "/src/css/common.2360a3dbacbeb662e7b1.min.css"
+    "js": "/src/js/common.ab951b48cc47ae8262e1.min.js",
+    "css": "/src/css/common.ab951b48cc47ae8262e1.min.css"
   },
   "home": {
-    "js": "/src/js/home.2360a3dbacbeb662e7b1.min.js"
+    "js": "/src/js/home.ab951b48cc47ae8262e1.min.js",
+    "css": "/src/css/home.ab951b48cc47ae8262e1.min.css"
+  },
+  "service": {
+    "js": "/src/js/service.ab951b48cc47ae8262e1.min.js"
+  },
+  "serviceSingle": {
+    "js": "/src/js/serviceSingle.ab951b48cc47ae8262e1.min.js",
+    "css": "/src/css/serviceSingle.ab951b48cc47ae8262e1.min.css"
   },
   "teamSingle": {
-    "js": "/src/js/teamSingle.2360a3dbacbeb662e7b1.min.js",
-    "css": "/src/css/teamSingle.2360a3dbacbeb662e7b1.min.css"
+    "js": "/src/js/teamSingle.ab951b48cc47ae8262e1.min.js"
   },
   "": {
     "woff": [
@@ -25,19 +32,25 @@
     ],
     "html": [
       "/src/home.html",
+      "/src/service.html",
+      "/src/serviceSingle.html",
       "/src/teamSingle.html"
     ],
     "png": [
       "/src/icons/a1.ff9425.png",
       "/src/icons/arr1.f26a7d.png",
       "/src/icons/arr2.683c19.png",
+      "/src/icons/arrow-bread.a4defc.png",
       "/src/icons/arrow.97bc1b.png",
+      "/src/icons/bull.e71b54.png",
       "/src/icons/clock.f6b0af.png",
       "/src/icons/email.7a8f02.png",
       "/src/icons/eng.c9c529.png",
       "/src/icons/fb.a398b9.png",
       "/src/icons/in.a15229.png",
       "/src/icons/inst.e1ce6c.png",
+      "/src/icons/news1.906aca.png",
+      "/src/icons/news2.110150.png",
       "/src/icons/rus.13db31.png",
       "/src/icons/slider.963cb9.png",
       "/src/icons/team-1.35a776.png",
@@ -50,7 +63,8 @@
       "/src/icons/call.e04308.svg",
       "/src/icons/desc.2d2bb1.svg",
       "/src/icons/egg.85cddb.svg",
-      "/src/icons/logo.559f92.svg"
+      "/src/icons/logo.559f92.svg",
+      "/src/icons/pdf.a16368.svg"
     ],
     "mp4": "/src/video/videoFon.1fd88c.mp4"
   }

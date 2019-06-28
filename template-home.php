@@ -17,16 +17,16 @@ get_template_part("/core/views/headerView")
                     <?php get_template_part("/core/views/homeTopSlider")?>
                 </div>
                 <div class="homeSlider__slide-item section" id="servicesSection">
-                    Section 2
+                    <?php get_template_part("/core/views/homeServices")?>
                 </div>
                 <div class="homeSlider__slide-item section" id="teamSection">
                     <?php get_template_part("/core/views/homeTeam")?>
                 </div>
                 <div class="homeSlider__slide-item section" id="blogSection">
-                    Section 4
+                    <?php get_template_part("/core/views/homeBlog")?>
                 </div>
                 <div class="homeSlider__slide-item section" id="contactSection">
-                    Section 5
+                    <?php get_template_part("/core/views/homeAbout")?>
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@
         <div class="menu-inner__menu">
             <div class="container">
                 <div class="menu-inner__menu-list">
-                    <a class="menu-inner__menu-item unbutton menu__menu-item menu__menu-item_active" id="home" href="<?=get_home_url()?>#homeSection">
+                    <a class="menu-inner__menu-item unbutton menu-inner__menu-item menu-inner__menu-item_active" id="home" href="<?=get_home_url()?>#homeSection">
                         <?= Lang::get("главная")?></a>
                     <a class="menu-inner__menu-item unbutton" id="services" href="<?=get_home_url()?>#servicesSection">
                         <?= Lang::get("услуги")?></a>

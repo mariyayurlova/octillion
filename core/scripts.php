@@ -20,6 +20,7 @@ add_action('template_redirect', function () {
 
         if (is_page_template('template-home.php')) {
             wp_enqueue_script('home', Assets::getJs('home'), false, null, true);
+            wp_enqueue_script('service', Assets::getJs('service'), false, null, true);
         }
         if (is_singular("member")){
             wp_enqueue_script('teamSingle', Assets::getJs('teamSingle'), false, null, true);
