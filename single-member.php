@@ -1,9 +1,9 @@
 <?php
 get_header();
-
-$slider = carbon_get_post_meta(get_the_ID(), "slider");
 $ln = Lang::current();
 
+$home_page = get_option( 'page_on_front' );
+$members = carbon_get_post_meta($home_page,"member_list");
 get_template_part("/core/views/headerView")
 ?>
     <main class="main">
@@ -11,13 +11,8 @@ get_template_part("/core/views/headerView")
             <?php get_template_part("/core/views/single_menu_tap") ?>
             <div class="container type-team">
                 <p class="teamSingle__title"><?= Lang::get("команда") ?></p>
-                <a class="teamSingle__arrow-link-left" href="">
-                    <div class="teamSingle__button-prev"></div>
-                </a>
-                <a class="teamSingle__arrow-link-right" href="">
-                    <div class="teamSingle__button-next"></div>
-                </a>
-                <div class="container">
+                <?php get_template_part("/core/views/prevNextPartner") ?>
+               <div class="container">
                     <div class="teamSingle__team-about">
                         <div class="teamSingle__team-about-content">
                             <?php
