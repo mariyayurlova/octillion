@@ -1,0 +1,243 @@
+@import "./../../common/constants";
+
+.blog{
+
+    &__inner{
+        position: relative;
+    }
+
+
+    &__blog-about{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        @include sm{
+            flex-direction: row;
+            padding-top: 1rem;
+            max-height: calc( 100vh - 82px );
+        }
+
+        @include md{
+            padding-top: 1rem;
+        }
+
+        @include lg{
+            padding-top: 1rem;
+        }
+
+        @include hd{
+            padding-top: 2rem;
+        }
+
+        @include xhd{
+            padding-top: 2rem;
+        }
+
+    }
+
+    &__about-content-title{
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 39px;
+        line-height: 48px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #A3B0BB;
+        margin-bottom: 1.5rem;
+
+    }
+
+    &__about-content-text{
+
+        margin-bottom: 2rem;
+
+        p{
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: #7B838A;
+            margin-top: 1rem;
+        }
+
+    }
+
+    &__about-content{
+
+        @include sm{
+            min-width: 332px;
+            width: 332px;
+        }
+
+        @include lg{
+            min-width: 311px;
+            width: 311px;
+        }
+        @include hd{
+            min-width: 500px;
+            width: 500px;
+        }
+
+        @include xhd{
+            min-width: 700px;
+            width: 700px;
+        }
+
+
+    }
+
+    &__about-item{
+
+        visibility: hidden;
+        transform: translateY(100px);
+        padding: 1rem;
+
+        @include lg{
+            width: 345px;
+        }
+
+        @include hd{
+            width: 500px;
+        }
+
+        @include xhd{
+            width: 650px;
+        }
+
+
+
+        &:nth-child(1){
+            opacity: 1 !important;
+        }
+
+        &:nth-child(2){
+
+            @include lg{
+                opacity: 1 !important;
+            }
+
+        }
+
+        &:nth-child(odd){
+            background: #F4F5F7;
+            @include sm{
+                opacity: 0.1;
+            }
+
+        }
+
+        &:nth-child(even){
+            background: #FFFFFF;
+
+            @include sm{
+                opacity: 0.1;
+            }
+
+
+        }
+
+        &_in{
+            animation           : animSlideIn2 1s .5s;
+            animation-fill-mode : forwards;
+        }
+
+    }
+
+    &__item-image{
+        width: 100%;
+        height: auto;
+    }
+
+    &__item-image-content{
+        width: 100%;
+        height: auto;
+    }
+
+
+    &__item-title{
+        font-family: "Open Sans",sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 30px;
+        color: #536780;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__item-text{
+        font-family: "Open Sans",sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+
+        color: #7B838A;
+    }
+
+
+    &__about-list{
+        position: fixed;
+        height: 100%;
+        overflow-y: auto;
+        right: 0;
+        width: 384px;
+
+
+        &::-webkit-scrollbar {
+            width: 0px;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+        /* Optional: show position indicator in red */
+        &::-webkit-scrollbar-thumb {
+            background: #FF0000;
+        }
+
+        @include sm{
+            padding-bottom: 7rem;
+        }
+
+        @include lg{
+            width: 695px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @include hd{
+            width: 1000px;
+        }
+
+        @include xhd{
+            width: 1300px;
+        }
+    }
+
+}
+
+
+@keyframes animSlideIn2 {
+    0% {
+        visibility: hidden;
+        transform: translateY(100px);
+    }
+    100% {
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animSlideOut2{
+    0% {
+        visibility: visible;
+        transform: translateY(0);
+    }
+    100% {
+        opacity : 0;
+        transform: translateY(100px);
+    }
+}

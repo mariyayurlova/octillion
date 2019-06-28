@@ -42,6 +42,7 @@ $( "#services.menu__menu-item" ).click(function() {
             row.addClass('services__slide_in');
         }, 500*i);
     });
+    console.log("done");
 });
 
 $( "#services.header__menu-item" ).click(function() {
@@ -51,4 +52,5 @@ $( "#services.header__menu-item" ).click(function() {
             row.addClass('services__slide_in');
         }, 500*i);
     });
+    console.log("done");
 });
