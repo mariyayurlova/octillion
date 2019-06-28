@@ -2,7 +2,7 @@ mixin header()
     +b.HEADER.header
         .type
             +e.content
-                +e.logo-content
+                +e.A.logo-content(href="")
                     +e.logo(src=require('./../images/logo.svg'), alt='Logo')
                     +e.logo-desc(src=require('./../images/desc.svg'), alt='Description')
                 +e.call
@@ -59,16 +59,16 @@ mixin header()
                     +e.UL.menu-soc
                         +e.LI.menu-soc-item
                             +e.A.menu-soc-link(href="")
-                                +e.menu-image(src=require('./../images/fb.png'), alt='A1')
+                                +e.menu-image(src=require('./../images/fb.svg'), alt='A1')
                         +e.LI.menu-soc-item
                             +e.A.menu-soc-link(href="")
-                                +e.menu-image(src=require('./../images/in.png'), alt='A1')
+                                +e.menu-image(src=require('./../images/in.svg'), alt='A1')
                         +e.LI.menu-soc-item
                             +e.A.menu-soc-link(href="")
-                                +e.menu-image(src=require('./../images/vk.png'), alt='A1')
+                                +e.menu-image(src=require('./../images/vk.svg'), alt='A1')
                         +e.LI.menu-soc-item
                             +e.A.menu-soc-link(href="")
-                                +e.menu-image(src=require('./../images/inst.png'), alt='A1')
+                                +e.menu-image(src=require('./../images/inst.svg'), alt='A1')
                     +e.lang-type.mobile-lang
                         +e.lang-type-item
                             +e.language-image(src=require('./../images/rus.png'), alt='A1')

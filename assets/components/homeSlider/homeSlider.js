@@ -24,9 +24,9 @@ $(document).ready(function () {
         effect: 'fade',
         speed: 3000,
         autoHeight: true,
+
+
     });
-
-
 
     $(".swiper-slide-active .homeSlider__title").addClass("homeSlider__title_in");
     $(".swiper-slide-active .homeSlider__description").addClass("homeSlider__description_subin");

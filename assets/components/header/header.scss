@@ -337,6 +337,21 @@
 
     }
 
+    &__menu-soc-link{
+
+
+
+        &:hover{
+
+            .header__menu-image{
+                animation: .5s hov ease-in-out forwards;
+            }
+
+
+        }
+
+    }
+
     &__menu-item{
         position: relative;
         margin-bottom: 9px;
@@ -486,6 +501,7 @@
 
 .desctop-lang{
     display: none;
+    cursor: pointer;
 
     @include md{
         display: block;
@@ -497,6 +513,7 @@
     padding-left: 1.5rem;
     max-width: 80px;
     margin-top: 1rem;
+    cursor: pointer;
 
     .header__lang-type-item{
         justify-content: unset;

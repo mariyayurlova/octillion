@@ -22,6 +22,16 @@ var swiper2 = new Swiper('.service__container', {
             slidesPerView: 3
         }
     },
+    forceToAxis: 'true',
+    mousewheel: {
+        invert: true,
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+    paginationClickable: true,
+    mousewheelControl: true
 
 });
 

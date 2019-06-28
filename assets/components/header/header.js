@@ -75,6 +75,12 @@ $(".desctop-lang").click(function(){
 
 });
 
+$(".main").click(function(){
+    $(".header__call-content").addClass("header__call-content_deactive");
+    $(".header__call-content").removeClass("header__call-content_active");
+
+});
+
 
 
 window.setCookie = function (key, value){

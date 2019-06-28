@@ -104,6 +104,21 @@
 
     }
 
+    &__menu-soc-link{
+
+
+
+        &:hover{
+
+            .menu__menu-image{
+                animation: .5s hov ease-in-out forwards;
+            }
+
+
+        }
+
+    }
+
     &__menu-image{
 
         @include hd{

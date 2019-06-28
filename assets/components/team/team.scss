@@ -189,31 +189,31 @@
         }
 
         &:nth-child(3n+1){
-            background: #E3E7EC;
+            background: #dde3e8;
             transition: background .5s;
 
             &:hover{
-                background: #dde2e9;
+                background: #c4c7cb;
                 transition: background .5s;
             }
         }
 
         &:nth-child(3n-1){
-            background: #E8EBEE;
+            background: #E7EAEE;
             transition: background .5s;
 
             &:hover{
-                background: #dadee2;
+                background: #c6c9cb;
                 transition: background .5s;
             }
         }
 
         &:nth-child(3n){
-            background: #F5F6F8;
+            background: #F3F4F6;
             transition: background .5s;
 
             &:hover{
-                background: #eef0f5;
+                background: #c7c8cb;
                 transition: background .5s;
             }
         }
@@ -264,7 +264,7 @@
 
             &:before{
                 width: 120px;
-                transition: width 1s;
+                transition: width .5s;
             }
 
         }

@@ -212,6 +212,21 @@
 
     }
 
+    &__menu-soc-link{
+
+
+
+        &:hover{
+
+            .menu-inner__menu-image{
+                animation: .5s hov ease-in-out forwards;
+            }
+
+
+        }
+
+    }
+
 
 }
 
