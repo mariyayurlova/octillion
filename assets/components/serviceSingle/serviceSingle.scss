@@ -141,20 +141,24 @@
 
 
     &__serviceSingle-about-content-text{
-        font-family: "Open Sans", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 19px;
-        color: #7B838A;
-        padding-top: 1rem;
 
-        @include hd{
-            font-size: 20px;
-        }
+        p{
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: #7B838A;
+            padding-top: 1rem;
+            margin-bottom: 1rem;
 
-        @include xhd{
-            margin-bottom: 4rem;
+            @include hd{
+                font-size: 20px;
+            }
+
+            @include xhd{
+                margin-bottom: 1rem;
+            }
         }
     }
 
