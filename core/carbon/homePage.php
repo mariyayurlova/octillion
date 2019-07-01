@@ -16,7 +16,10 @@
                         ->add_fields( 'image', [
                             Field::make( 'file', 'slide_background', 'Изображение' )
                                 ->set_type( "image" )
-                                ->set_value_type( 'url' ),
+                                ->set_value_type( 'url' )
+                                ->set_width( 30 ),
+                            Field::make( 'text', 'slide_link', 'Ссылка слайда')
+                                ->set_width( 70 ),
                             Field::make( 'separator', 'crb_separator_home_slide_'.$lang[0], 'Контент слайда '.strtoupper($lang[0])),
                             Field::make( 'text', 'slide_title_'.$lang[0], 'Заголовок слайда '.strtoupper($lang[0])),
                             Field::make( 'text', 'slide_subtitle_'.$lang[0], 'Подзаголовок слайда '.strtoupper($lang[0])),
@@ -41,7 +44,9 @@
                                 Field::make( 'file', 'slide_background', 'Видео' )
                                     ->set_type( "video" )
                                     ->set_value_type( 'url' )
-                                    ->set_width( 50 ),
+                                    ->set_width( 30 ),
+                                Field::make( 'text', 'slide_link', 'Ссылка слайда')
+                                    ->set_width( 70 ),
                                 Field::make( 'separator', 'crb_separator_home_slide_'.$lang[0], 'Контент слайда '.strtoupper($lang[0])),
                                 Field::make( 'text', 'slide_title_'.$lang[0], 'Заголовок слайда '.strtoupper($lang[0])),
                                 Field::make( 'text', 'slide_subtitle_'.$lang[0], 'Подзаголовок слайда '.strtoupper($lang[0])),
@@ -77,6 +82,33 @@
                         )->set_layout( "tabbed-horizontal" ) ,
                 ]
             );
+        Container::make( 'post_meta', "О компании" )
+            ->where( 'post_type', '=', 'page' )
+            ->where( 'post_template', '=', 'template-home.php' )
+            ->add_fields(
+                [
+                    Field::make( 'textarea', 'cbn_about_desc_'.$lang[0], 'Вступление'.strtoupper($lang[0])),
+                    Field::make( 'textarea', 'cbn_about_desc_'.$lang[1], 'Вступление'.strtoupper($lang[1])),
+
+                    Field::make( 'separator', 'separator_about_partners_separ', 'Наши пртнеры '),
+                    Field::make( 'select', 'cbn_about_partners_link', 'partners_link' )
+                        ->add_options( 'page_list' ),
+                    Field::make( 'text', 'cbn_about_partners_title_'.$lang[0], 'partners_title '.strtoupper($lang[0]) ),
+                    Field::make( 'textarea', 'cbn_about_partners_content_'.$lang[0], 'partners_content '.strtoupper($lang[0])),
+
+                    Field::make( 'text', 'cbn_about_partners_title_'.$lang[1], 'partners_title '.strtoupper($lang[1]) ),
+                    Field::make( 'textarea', 'cbn_about_partners_content_'.$lang[1], 'partners_content '.strtoupper($lang[1])),
+//
+                    Field::make( 'separator', 'separator_about_clients_separ', 'Наши клиенты '),
+                    Field::make( 'select', 'cbn_about_clients_link', 'clients_link' )
+                        ->add_options( 'page_list' ),
+                    Field::make( 'text', 'cbn_about_clients_title_'.$lang[0], 'clients_title '.strtoupper($lang[0]) ),
+                    Field::make( 'textarea', 'cbn_about_clients_content_'.$lang[0], 'clients_content '.strtoupper($lang[0])),
+
+                    Field::make( 'text', 'cbn_about_clients_title_'.$lang[1], 'clients_title '.strtoupper($lang[1]) ),
+                    Field::make( 'textarea', 'cbn_about_clients_content_'.$lang[1], 'clients_content '.strtoupper($lang[1])),
+                ]
+            );
 	}
 	
 	add_action( 'after_setup_theme', 'crb_home_page_settings_load' );
@@ -85,14 +117,27 @@
 	}
 
     function members_list(){
-    $my_query   = new WP_Query();
-    $query_members = $my_query->query( [
-        'post_type' => 'member',
-    ] );
+        $my_query   = new WP_Query();
+        $query_members = $my_query->query( [
+            'post_type' => 'member',
+        ] );
 
-    $member_list = [];
-    foreach($query_members as $member) {
-        $member_list[ $member->ID ] = $member->post_title;
+        $member_list = [];
+        foreach($query_members as $member) {
+            $member_list[ $member->ID ] = $member->post_title;
+        }
+        return $member_list;
     }
-    return $member_list;
-}
+    function page_list(){
+        $my_query   = new WP_Query();
+        $query_members = $my_query->query( [
+            'post_type' => 'page',
+        ] );
+
+        $member_list = [];
+        $member_list[ 0 ] = "---";
+        foreach($query_members as $member) {
+            $member_list[ $member->ID ] = $member->post_title;
+        }
+        return $member_list;
+    }

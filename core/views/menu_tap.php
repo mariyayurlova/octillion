@@ -24,22 +24,22 @@
                 <ul class="menu__menu-soc">
                     <li class="menu__menu-soc-item">
                         <a class="menu__menu-soc-link" href="<?=esc_url($fb)?>">
-                            <img class="menu__menu-image" src="/wp-content/themes/octillion/src/icons/fb.a398b9.png" alt="A1" title=""/>
+                            <img class="menu__menu-image" src="/wp-content/themes/octillion/src/icons/fb.ffeb10.svg" alt="A1" title=""/>
                         </a>
                     </li>
                     <li class="menu__menu-soc-item">
                         <a class="menu__menu-soc-link" href="<?=esc_url($linkedIn)?>">
-                            <img class="menu__menu-image" src="/wp-content/themes/octillion/src/icons/in.a15229.png" alt="A1" title=""/>
+                            <img class="menu__menu-image" src="/wp-content/themes/octillion/src/icons/in.578229.svg" alt="A1" title=""/>
                         </a>
                     </li>
                     <li class="menu__menu-soc-item">
                         <a class="menu__menu-soc-link" href="<?= esc_url($vk)?>">
-                            <img class="menu__menu-image" src="/wp-content/themes/octillion/src/icons/vk.3ea984.png" alt="A1" title=""/>
+                            <img class="menu__menu-image" src="/wp-content/themes/octillion/src/icons/vk.dd8ca6.svg" alt="A1" title=""/>
                         </a>
                     </li>
                     <li class="menu__menu-soc-item">
                         <a class="menu__menu-soc-link" href="<?=esc_url($insta)?>">
-                            <img class="menu__menu-image" src="/wp-content/themes/octillion/src/icons/inst.e1ce6c.png" alt="A1" title=""/>
+                            <img class="menu__menu-image" src="/wp-content/themes/octillion/src/icons/inst.d2033d.svg" alt="A1" title=""/>
                         </a>
                     </li>
                 </ul>

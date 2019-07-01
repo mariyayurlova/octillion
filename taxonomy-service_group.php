@@ -38,9 +38,6 @@ get_template_part("/core/views/headerView");
                             <p class="service__service-about-content-text"><?= $term_desc ?></p>
                             <div class="service__service-about-content-type">
                                 <?php
-                                /**
-                                 * @var WP_Term $term
-                                 */
                                 $args = [
                                     'post_type' => 'service',
                                     'tax_query' => [
@@ -51,68 +48,37 @@ get_template_part("/core/views/headerView");
                                         ]
                                     ],
                                 ];
-                                $query = new WP_Query($args);
-                                $posts_count = count($query->posts);
-                                $posts_count_in_ul = intdiv($posts_count, 3);
-                                $posts_remainder_in_ul = $posts_count % 3;
+                                $query = new WP_Query();
+                                $services = $query->query($args);
 
-                                $size_first_list = $posts_remainder_in_ul > 0 ? $posts_count_in_ul + 1 : $posts_count_in_ul;
-                                $size_second_list = $posts_remainder_in_ul == 2 ? $posts_count_in_ul + 1 : $posts_count_in_ul;
-                                $size_third_list = $posts_count_in_ul;
-
-                                if ($query->have_posts()) :?>
-
-                                    <ul class="service__service-about-content-list">
-                                        <?php
-                                        $first_list_count = 0;
-                                        while ($query->have_posts() && $first_list_count < $size_first_list):
-                                            $query->the_post();
-                                            $first_list_count++;
+                                if (count($services) > 0) :
+                                    $posts_in_ul = intdiv(count($services), 3);
+                                    $posts_remainder_in_ul = count($services) % 3;
+                                    $posts_in_ul = $posts_remainder_in_ul % 3 > 0 ? $posts_in_ul + 1 : $posts_in_ul;
+                                    $service_table = array_chunk($services, $posts_in_ul);
+                                    foreach ($service_table as $column) : ?>
+                                        <ul class="service__service-about-content-list">
+                                            <?php
+                                            $first_list_count = 0;
+                                            foreach ($column as $row) :
+                                                /**
+                                                 * @var WP_Post $row
+                                                 */
+                                                ?>
+                                                <li class="service__service-about-content-item">
+                                                    <a class="service__service-about-content-link"
+                                                       href="<?= get_permalink($row->ID) ?>">
+                                                        <?= $row->post_title ?>
+                                                    </a>
+                                                </li>
+                                            <?php
+                                            endforeach;
                                             ?>
-                                            <li class="service__service-about-content-item">
-                                                <a class="service__service-about-content-link"
-                                                   href="<?php the_permalink() ?>">
-                                                    <?= the_title() ?>
-                                                </a>
-                                            </li>
-                                        <?php
-                                        endwhile; ?>
-                                    </ul>
-                                    <ul class="service__service-about-content-list">
-                                        <?php
-                                        $second_list_count = 0;
-                                        while ($query->have_posts() && $second_list_count < $size_second_list):
-                                            $query->the_post();
-                                            $second_list_count++;
-                                            ?>
-                                            <li class="service__service-about-content-item">
-                                                <a class="service__service-about-content-link"
-                                                   href="<?php the_permalink() ?>">
-                                                    <?= the_title() ?>
-                                                </a>
-                                            </li>
-                                        <?php
-                                        endwhile; ?>
-                                    </ul>
-                                    <ul class="service__service-about-content-list">
-                                        <?php
-                                        $third_list_count = 0;
-                                        while ($query->have_posts() && $third_list_count < $size_third_list):
-                                            $query->the_post();
-                                            $first_list_count++;
-                                            ?>
-                                            <li class="service__service-about-content-item">
-                                                <a class="service__service-about-content-link"
-                                                   href="<?php the_permalink() ?>">
-                                                    <?= the_title() ?>
-                                                </a>
-                                            </li>
-                                        <?php
-                                        endwhile; ?>
-                                    </ul>
-                                <?php
+                                        </ul>
+                                    <?php
+                                    endforeach;
                                 endif;
-                                wp_reset_postdata();
+                                //                                wp_reset_postdata();
                                 ?>
                             </div>
                         </div>

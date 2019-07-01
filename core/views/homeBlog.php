@@ -1,53 +1,58 @@
 <?php
 
 $ln = Lang::current();
-$member_list = carbon_get_post_meta(get_the_ID(),'member_list');
+$archive_title = carbon_get_theme_option("archive_title_" . $ln);
+$archive_desc = carbon_get_theme_option("archive_desc_" . $ln);
+
 ?>
 <div class="blog">
     <div class="blog__inner">
         <div class="container">
             <div class="blog__blog-about">
                 <div class="blog__about-content">
-                    <p class="blog__about-content-title">БЛОГ
+                    <p class="blog__about-content-title"><?= $archive_title ?>
                     </p>
                     <div class="blog__about-content-text">
-                        <P>Наследство — это совокупность принадлежавших наследодателю на день открытия наследства вещей, а также иных видов имущества, в том числе имущественных прав и обязанностей. Согласно ГК РФ, наследством может стать любая собственность — материальная и нематериальная. Получить ее после смерти наследодателя возможно двумя способами: по завещанию, если таковое имеется, либо по закону.</P>
-                        <P>Получение наследства может быть связано с рядом трудностей, которые требуют помощи квалифицированных юристов и адвокатов. Наличие у наследодателя спорного имущества или имущества, которое необходимо разыскать, а также долгов или ранее</P>
+                        <?= wpautop($archive_desc) ?>
                     </div>
                 </div>
                 <div class="blog__about-list">
-                    <div class="blog__about-item"><a class="blog__about-link" href="">
-                            <div class="blog__item-image"><img class="blog__item-image-content" src="/wp-content/themes/octillion/src/icons/news1.906aca.png" alt="A1" title=""/>
+                    <?php
+                    $args = [
+                        'post_type' => 'post'
+                    ];
+
+                    $query = new WP_Query( $args );
+
+                    if ( $query->have_posts() ) :
+                        while ( $query->have_posts() ) :
+                            $query->the_post();
+                            $name = carbon_get_post_meta(get_the_ID() , "crb_page_name_".$ln);
+                            $excerpt = carbon_get_post_meta(get_the_ID() , "crb_page_excerpt_".$ln);
+                            $img_url = get_the_post_thumbnail_url( get_the_ID(), "full" );
+                            ?>
+                            <div class="blog__about-item">
+                                <a class="blog__about-link" href="<?php the_permalink()?>">
+                                    <div class="blog__item-image">
+                                        <?php if (!empty($img_url)):?>
+                                        <img class="blog__item-image-content" src="<?= $img_url ?>" alt="A1" title=""/>
+                                        <?php endif; ?>
+                                    </div>
+                                    <div class="blog__item-title">
+                                        <?= $name?>
+                                    </div>
+                                    <?php if (!empty($excerpt)):?>
+                                    <div class="blog__item-text">
+                                        <?= $excerpt ?>
+                                    </div>
+                                    <?php endif;?>
+                                </a>
                             </div>
-                            <div class="blog__item-title">Новость 1
-                            </div>
-                            <div class="blog__item-text">аследства вещей, а также иных видов имущества, в том числе имущественных прав и обязанностей. Согласно ГК РФ, наследством может стать любая собственность — материальная и нематериальная. Получить ее после смерти наследодателя
-                            </div></a>
-                    </div>
-                    <div class="blog__about-item"><a class="blog__about-link" href="">
-                            <div class="blog__item-image"><img class="blog__item-image-content" src="/wp-content/themes/octillion/src/icons/news2.110150.png" alt="A1" title=""/>
-                            </div>
-                            <div class="blog__item-title">Новость 2
-                            </div>
-                            <div class="blog__item-text">аследства вещей, а также иных видов имущества, в том числе имущественных прав и обязанностей. Согласно ГК РФ, наследством может стать любая собственность — материальная и нематериальная. Получить ее после смерти наследодателя
-                            </div></a>
-                    </div>
-                    <div class="blog__about-item"><a class="blog__about-link" href="">
-                            <div class="blog__item-image"><img class="blog__item-image-content" src="/wp-content/themes/octillion/src/icons/news2.110150.png" alt="A1" title=""/>
-                            </div>
-                            <div class="blog__item-title">Новость 3
-                            </div>
-                            <div class="blog__item-text">аследства вещей, а также иных видов имущества, в том числе имущественных прав и обязанностей. Согласно ГК РФ, наследством может стать любая собственность — материальная и нематериальная. Получить ее после смерти наследодателя
-                            </div></a>
-                    </div>
-                    <div class="blog__about-item"><a class="blog__about-link" href="">
-                            <div class="blog__item-image"><img class="blog__item-image-content" src="/wp-content/themes/octillion/src/icons/news1.906aca.png" alt="A1" title=""/>
-                            </div>
-                            <div class="blog__item-title">Новость 4
-                            </div>
-                            <div class="blog__item-text">аследства вещей, а также иных видов имущества, в том числе имущественных прав и обязанностей. Согласно ГК РФ, наследством может стать любая собственность — материальная и нематериальная. Получить ее после смерти наследодателя
-                            </div></a>
-                    </div>
+                            <?php
+                        endwhile;
+                    endif;
+                    wp_reset_postdata();
+                    ?>
                 </div>
             </div>
         </div>

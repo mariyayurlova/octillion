@@ -12,6 +12,7 @@ $ln = Lang::current();
             $subtitle = $slide["slide_subtitle_" . $ln];
             $desc_title = $slide["slide_desc_title_" . $ln];
             $desc = $slide["slide_desc_" . $ln];
+            $slide_link = $slide["slide_link"];
             $isVideo = ($slide["_type"] == "video") ? true : false;
             ?>
             <div class="homeSlider__slide swiper-slide <?= ($isVideo) ? "video" : "" ?>">
@@ -19,6 +20,9 @@ $ln = Lang::current();
                     <span class="homeSlider__title"><?= $title ?></span>
                     <span class="homeSlider__description"><?= $subtitle ?></span>
                     <p class="homeSlider__text"><?= $desc ?></p>
+                    <a class="homeSlider__slide-link" href="<?= esc_url($slide_link)?>">
+                        <spun class="homeSlider__slide-link-text">Подробнее </spun>
+                    </a>
                 </div>
                 <?php if($isVideo):
                     ?>

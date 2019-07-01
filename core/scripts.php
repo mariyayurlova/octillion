@@ -22,10 +22,13 @@ add_action('template_redirect', function () {
             wp_enqueue_script('home', Assets::getJs('home'), false, null, true);
             wp_enqueue_script('service', Assets::getJs('service'), false, null, true);
         }
+        if (is_page_template('template-contacts.php')) {
+            wp_enqueue_script('contact', Assets::getJs('contact'), false, null, true);
+        }
         if (is_singular("member")){
             wp_enqueue_script('teamSingle', Assets::getJs('teamSingle'), false, null, true);
         }
-        if (is_singular("service")){
+        if (is_singular("service") || is_singular("post")){
             wp_enqueue_script('serviceSingle', Assets::getJs('serviceSingle'), false, null, true);
         }
         if (is_tax( 'service_group' )){

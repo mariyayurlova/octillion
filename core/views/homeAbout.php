@@ -1,11 +1,17 @@
 <?php
-
 $ln = Lang::current();
-$member_list = carbon_get_post_meta(get_the_ID(),'member_list');
+
+$about_desc = carbon_get_post_meta(get_the_ID(), "cbn_about_desc_" . $ln);
+$partners_title = carbon_get_post_meta(get_the_ID(), "cbn_about_partners_title_" . $ln);
+$partners_content = carbon_get_post_meta(get_the_ID(), "cbn_about_partners_content_" . $ln);
+$partners_link = carbon_get_post_meta(get_the_ID(), "cbn_about_partners_link");
+$clients_link = carbon_get_post_meta(get_the_ID(), "cbn_about_clients_link");
+$clients_title = carbon_get_post_meta(get_the_ID(), "cbn_about_clients_title_" . $ln);
+$clients_content = carbon_get_post_meta(get_the_ID(), "cbn_about_clients_content_" . $ln);
 ?>
 <div class="about">
     <div class="about__inner">
-        <div class="about__title">О КОМПАНИИ
+        <div class="about__title"><?= Lang::get('о компании') ?>
         </div>
         <div class="about__container swiper-container">
             <div class="about__wrapper swiper-wrapper">
@@ -14,10 +20,9 @@ $member_list = carbon_get_post_meta(get_the_ID(),'member_list');
                         <div class="link" href="">
                             <div class="about__slide-container">
                                 <div class="about__slide-content">
-                                    <div class="about__slide-title">Для иностранных граждан
+                                    <div class="about__slide-text">
+                                        <?= wpautop($about_desc); ?>
                                     </div>
-                                    <div class="about__slide-text">Юридическая компания, оказывающая широкий спектр услуг. Наши эксперты имеют большой опыт и состоят в Коллегиях адвокатов Минска.
-                                    </div><a class="about__slide-link"></a>
                                 </div>
                             </div>
                         </div>
@@ -27,32 +32,38 @@ $member_list = carbon_get_post_meta(get_the_ID(),'member_list');
                     <div class="container">
                         <div class="link" href="">
                             <div class="about__slide-container">
-                                <div class="about__slide-content">
-                                    <div class="about__slide-title">Для иностранных граждан
+                                <div class="slide-content">
+                                    <div class="about__slide-title"><?= $partners_title ?>
                                     </div>
-                                    <div class="about__slide-text">Юридическая компания, оказывающая широкий спектр услуг. Наши эксперты имеют большой опыт и состоят в Коллегиях адвокатов Минска.
+                                    <div class="about__slide-text">
+                                        <?= wpautop($partners_content) ?>
                                     </div>
-                                    <div class="about__slide-list"><ul>
-                                            <li class="about__slide-item"><a class="about__slide-link" href="">Комплексная юридическая</a>
-                                            </li>
-                                            <li class="about__slide-item"><a class="about__slide-link" href="">Поддержка менеджмента</a>
-                                            </li>
-                                            <li class="about__slide-item"><a class="about__slide-link" href="">Бракоразводные процессы</a>
-                                            </li>
-                                            <li class="about__slide-item"><a class="about__slide-link" href="">Сделки купли-продажи</a>
-                                            </li>
-                                            <li class="about__slide-item"><a class="about__slide-link" href="">Наследственные дела</a>
-                                            </li>
-                                    </div>
+                                    <?php if (!empty($partners_link) || $clients_link != 0): ?>
+                                        <a class="about__slide-link" href="<?= get_permalink($partners_link) ?>">Подробнее...</a>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="about__button-next swiper-button-next">
-            </div>
-            <div class="about__button-prev swiper-button-prev">
+                <div class="about__slide swiper-slide">
+                    <div class="container">
+                        <div class="link" href="">
+                            <div class="about__slide-container">
+                                <div class="slide-content">
+                                    <div class="about__slide-title"><?= $clients_title ?>
+                                    </div>
+                                    <div class="about__slide-text">
+                                        <?= wpautop($clients_content) ?>
+                                    </div>
+                                    <?php if (!empty($clients_link) || $clients_link != 0): ?>
+                                        <a class="about__slide-link" href="<?= get_permalink($clients_link) ?>">Подробнее...</a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

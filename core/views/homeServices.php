@@ -37,12 +37,12 @@ $terms = get_terms( [
                             <div class="services__slide-container">
                                 <div class="services__slide-content">
                                     <div class="services__slide-title">
-                                        <a href="<?=get_term_link($term->term_id)?>"><?= $term_name ?></a>
+                                        <?= $term_name ?>
                                     </div>
                                     <div class="services__slide-text">
                                         <?= $term_desc?>
                                     </div>
-                                    <div class="services__slide-list"><ul>
+                                    <ul class="services__slide-list">
                                         <?php
                                         // Цикл
                                         if ( $query->have_posts() ) :
@@ -57,7 +57,8 @@ $terms = get_terms( [
                                         endif;
                                         wp_reset_postdata();
                                         ?>
-                                    </div>
+                                    </ul>
+                                    <a class="services__slide-add" href="<?=get_term_link($term->term_id)?>">Подробнее...</a>
                                 </div>
                             </div>
                         </div>
