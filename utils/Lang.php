@@ -36,8 +36,17 @@
                 'ru' => 'о компании',
                 'en' => 'about company'
             ],
+            'Подробнее' => [
+                'ru' => 'Подробнее',
+                'en' => 'More'
+            ],
+            'Контакты' => [
+                'ru' => 'Контакты',
+                'en' => 'Contacts'
+            ],
 
-		];
+
+        ];
 
 		public static function current() {
 			return ( isset( $_COOKIE[ self::COOKIE_KEY ] ) and in_array( $_COOKIE[ self::COOKIE_KEY ], self::LANGUAGES ) ) ?

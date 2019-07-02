@@ -39,7 +39,9 @@ $clients_content = carbon_get_post_meta(get_the_ID(), "cbn_about_clients_content
                                         <?= wpautop($partners_content) ?>
                                     </div>
                                     <?php if (!empty($partners_link) || $clients_link != 0): ?>
-                                        <a class="about__slide-link" href="<?= get_permalink($partners_link) ?>">Подробнее...</a>
+                                        <a class="about__slide-link" href="<?= get_permalink($partners_link) ?>">
+                                            <?= Lang::get("Подробнее")?>...
+                                        </a>
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -57,7 +59,8 @@ $clients_content = carbon_get_post_meta(get_the_ID(), "cbn_about_clients_content
                                         <?= wpautop($clients_content) ?>
                                     </div>
                                     <?php if (!empty($clients_link) || $clients_link != 0): ?>
-                                        <a class="about__slide-link" href="<?= get_permalink($clients_link) ?>">Подробнее...</a>
+                                        <a class="about__slide-link" href="<?= get_permalink($clients_link) ?>">
+                                            <?= Lang::get("Подробнее")?>...</a>
                                     <?php endif; ?>
                                 </div>
                             </div>

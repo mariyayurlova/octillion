@@ -20,6 +20,9 @@ add_action('template_redirect', function () {
         if (is_page_template('template-contacts.php')) {
             wp_enqueue_style( 'contact', Assets::getCss( 'contact' ), false, null );
         }
+        if (is_page_template('template-clients.php')) {
+            wp_enqueue_style( 'clients', Assets::getCss( 'clients' ), false, null );
+        }
         if (is_singular("member")){
             wp_enqueue_style( 'teamSingle', Assets::getCss( 'teamSingle' ), false, null );
         }

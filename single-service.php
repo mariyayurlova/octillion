@@ -15,9 +15,10 @@ get_template_part("/core/views/headerView")
                     <p class="serviceSingle__title"><?= $name ?></p>
                     <div class="breadcrubs">
                         <ul class="breadcrubs__list">
-                            <li class="breadcrubs__item"><a class="breadcrubs__link" href="">услуги</a>
+                            <li class="breadcrubs__item"><a class="breadcrubs__link" href=""><?= Lang::get("услуги")?></a>
                             </li>
-                            <li class="breadcrubs__item"><a class="breadcrubs__link" href="">для  физических лиц</a>
+                            <li class="breadcrubs__item">
+                                <slag class="breadcrubs__link" ><?= $name ?></slag>
                             </li>
                         </ul>
                     </div>

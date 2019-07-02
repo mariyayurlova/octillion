@@ -25,6 +25,9 @@ add_action('template_redirect', function () {
         if (is_page_template('template-contacts.php')) {
             wp_enqueue_script('contact', Assets::getJs('contact'), false, null, true);
         }
+        if (is_page_template('template-clients.php')) {
+            wp_enqueue_script('clients', Assets::getJs('clients'), false, null, true);
+        }
         if (is_singular("member")){
             wp_enqueue_script('teamSingle', Assets::getJs('teamSingle'), false, null, true);
         }

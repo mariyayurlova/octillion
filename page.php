@@ -1,11 +1,51 @@
 <?php
-	get_header();
-//	get_template_part( '/core/views/headerView' );
+get_header();
+$ln = Lang::current();
 
-?>
-<?php
+$name = carbon_get_post_meta(get_the_ID(),"crb_page_name_".$ln);
+if (empty($name)){
+    $name = get_the_title();
+}
+$content = carbon_get_post_meta(get_the_ID(),"crb_page_content_".$ln);
 
+
+get_template_part("/core/views/headerView")
 ?>
-    <h1>page</h1>
+    <main class="main">
+        <div class="serviceSingle">
+            <?php get_template_part("/core/views/single_menu_tap")?>
+            <div class="container type-serviceSingle">
+                <div class="container">
+                    <p class="serviceSingle__title"><?= $name ?></p>
+                    <div class="breadcrubs">
+                        <ul class="breadcrubs__list">
+                            <li class="breadcrubs__item">
+                                <a class="breadcrubs__link" href="<?=get_home_url()?>#blogSection"><?= Lang::get("блог")?></a>
+                            </li>
+                            <li class="breadcrubs__item">
+                                <a class="breadcrubs__link" href=""><?= get_the_title()?></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="serviceSingle__serviceSingle-about">
+                        <div class="serviceSingle__serviceSingle-about-content">
+                            <div class="serviceSingle__serviceSingle-about-content-text">
+                                <?php
+                                if (empty($content)){
+                                    while (have_posts()){
+                                        the_post();
+                                        the_content();
+                                    }
+                                }else{
+                                    echo apply_filters( 'the_content', $content);
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 <?php
-	get_footer();
+get_footer();

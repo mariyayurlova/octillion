@@ -8,7 +8,7 @@ $terms = get_terms( [
 ?>
 <div class="services">
     <div class="services__inner">
-        <div class="services__title">услуги
+        <div class="services__title"><?= Lang::get("услуги")?>
         </div>
         <div class="services__container swiper-container">
             <div class="services__wrapper swiper-wrapper">
@@ -26,10 +26,12 @@ $terms = get_terms( [
                                 'taxonomy' => 'service_group',
                                 'field' => 'slug',
                                 'terms' => $term->slug,
-                            ]
+                            ],
+                            'posts_per_page' => '5',
                         ],
                     ];
                     $query = new WP_Query( $args );
+//                    var_dump($query->posts);
                 ?>
                 <div class="services__slide swiper-slide">
                     <div class="container">
@@ -44,10 +46,12 @@ $terms = get_terms( [
                                     </div>
                                     <ul class="services__slide-list">
                                         <?php
+                                        $counter = 0;
                                         // Цикл
-                                        if ( $query->have_posts() ) :
-                                            while ( $query->have_posts() ):
+                                        if ( $query->have_posts()) :
+                                            while ( $query->have_posts() && $counter < 5):
                                                 $query->the_post();
+                                                $counter++;
                                                 ?>
                                                 <li class="services__slide-item">
                                                     <a class="services__slide-link" href="<?php the_permalink()?>"><?= the_title()?></a>
@@ -58,7 +62,9 @@ $terms = get_terms( [
                                         wp_reset_postdata();
                                         ?>
                                     </ul>
-                                    <a class="services__slide-add" href="<?=get_term_link($term->term_id)?>">Подробнее...</a>
+                                    <a class="services__slide-add" href="<?=get_term_link($term->term_id)?>">
+                                        <?=Lang::get("Подробнее")?>...
+                                    </a>
                                 </div>
                             </div>
                         </div>

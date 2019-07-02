@@ -33,7 +33,7 @@ $member_list = carbon_get_post_meta(get_the_ID(),'member_list');
                                                 </div>
                                             <a class="team__slide-link" href="<?= get_permalink($member["member_id"])?>">
                                                 <spun class="team__slide-link-text">
-                                                    Подробнее
+                                                    <?=Lang::get("Подробнее")?>
                                                 </spun>
                                             </a>
                                         </div>

@@ -78,7 +78,6 @@ get_template_part("/core/views/headerView");
                                     <?php
                                     endforeach;
                                 endif;
-                                //                                wp_reset_postdata();
                                 ?>
                             </div>
                         </div>

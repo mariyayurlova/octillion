@@ -16,10 +16,10 @@ get_template_part("/core/views/headerView")
                     <div class="breadcrubs">
                         <ul class="breadcrubs__list">
                             <li class="breadcrubs__item">
-                                <a class="breadcrubs__link" href="">услуги</a>
+                                <a class="breadcrubs__link" href="<?=get_home_url()?>#blogSection"><?= Lang::get("блог")?></a>
                             </li>
                             <li class="breadcrubs__item">
-                                <a class="breadcrubs__link" href="">для  физических лиц</a>
+                                <a class="breadcrubs__link" href=""><?= get_the_title()?></a>
                             </li>
                         </ul>
                     </div>
