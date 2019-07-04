@@ -7,6 +7,7 @@ get_header();
 $ln = Lang::current();
 
 get_template_part('/core/views/headerView'); ?>
+<SCRIPT src="http://www.webglearth.com/v2/api.js"></SCRIPT>
 <main class="main">
     <div class="contact">
         <?php get_template_part("/core/views/single_menu_tap") ?>
@@ -26,7 +27,7 @@ get_template_part('/core/views/headerView'); ?>
                 </div>
                 <div class="contact__contact-about">
                     <div class="contact__contact-about-content">
-                        <div class="contact__globus" id="globus">
+                        <div class="contact__globus" id="earth_div">
                         </div>
                     </div>
                 </div>

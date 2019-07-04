@@ -11,11 +11,10 @@ $clients_content = carbon_get_post_meta(get_the_ID(), "cbn_about_clients_content
 ?>
 <div class="about">
     <div class="about__inner">
-        <div class="about__title"><?= Lang::get('о компании') ?>
-        </div>
-        <div class="about__container swiper-container">
-            <div class="about__wrapper swiper-wrapper">
-                <div class="about__slide swiper-slide">
+        <div class="about__title"><?= Lang::get('о компании') ?></div>
+        <div class="about__container ">
+            <div class="about__wrapper ">
+                <div class="about__slide ">
                     <div class="container">
                         <div class="link" href="">
                             <div class="about__slide-container">
@@ -28,7 +27,7 @@ $clients_content = carbon_get_post_meta(get_the_ID(), "cbn_about_clients_content
                         </div>
                     </div>
                 </div>
-                <div class="about__slide swiper-slide">
+                <div class="about__slide ">
                     <div class="container">
                         <div class="link" href="">
                             <div class="about__slide-container">
@@ -48,7 +47,7 @@ $clients_content = carbon_get_post_meta(get_the_ID(), "cbn_about_clients_content
                         </div>
                     </div>
                 </div>
-                <div class="about__slide swiper-slide">
+                <div class="about__slide ">
                     <div class="container">
                         <div class="link" href="">
                             <div class="about__slide-container">
