@@ -30,6 +30,7 @@ let entries = {
     serviceSingle: './serviceSingle.js',
     clients: './clients.js',
     contact: './contact.js',
+    error: './error.js',
 };
 
 let pugs = {
@@ -50,6 +51,9 @@ let pugs = {
     },
     contact: {
         title: "contact title"
+    },
+    error: {
+        title: "error title"
     }
 };
 

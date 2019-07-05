@@ -12,6 +12,7 @@ import './../components/team/team';
 import './../components/services/services';
 import './../components/blog/blog';
 import './../components/about/about';
+import './../components/contacts/contacts';
 
 
 

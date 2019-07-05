@@ -68,7 +68,13 @@
             line-height: 19px;
             color: #7B838A;
             margin-top: 1rem;
+
+            @include xhd{
+                font-size: 20px;
+            }
         }
+
+
 
     }
 

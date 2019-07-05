@@ -115,13 +115,13 @@
     &__slide{
         opacity: 0;
         transform: translateX(100px);
-        min-height: calc( 100vh - 82px );
+        padding-bottom: 30px;
+
 
 
         @include sm{
             padding-left: 44px;
             padding-right: 44px;
-            min-height: calc( 100vh - 82px );
 
             .container{
                 padding-left: .5rem;
@@ -129,9 +129,12 @@
             }
         }
 
+
         @include lg{
             padding-left: 2rem;
             padding-right: 2rem;
+            min-height: calc( 100vh - 82px );
+            padding-bottom: 0px;
         }
 
         @include hd{
@@ -139,18 +142,52 @@
             padding-right: 4rem;
         }
 
-        &:nth-child(3n+1){
-            background: #FBFBFC;
-            transition: background .5s;
+
+        &:nth-child(1){
+
+            width: 100%;
+
+            @include md{
+                width: 50%;
+            }
+
+            @include lg{
+                width: 33.33%;
+            }
+
+        }
+
+        &:nth-child(2){
+            width: 100%;
+
+            @include md{
+                width: 50%;
+            }
+
+            @include lg{
+                width: 33.33%;
+            }
+        }
+
+        &:nth-child(3){
+            width: 100%;
+
+            @include md{
+                width: 50%;
+            }
+
+            @include lg{
+                width: 33.33%;
+            }
         }
 
         &:nth-child(3n-1){
-            background: #F6F7F9;
+            background: #F1F2F5;
             transition: background .5s;
         }
 
         &:nth-child(3n){
-            background: #F4F6F7;
+            background: #FFFFFF;
             transition: background .5s;
         }
 
@@ -177,7 +214,15 @@
     }
 
 
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
 
+        @include md{
+            flex-direction: row;
+        }
+    }
 
 
 

@@ -11,12 +11,18 @@
         max-height: calc( 100vh - 82px );
     }
 
-
-    &__globus{
-        width:100%;
-        max-height: calc( 100vh - 250px );
-        height: calc( 100vh - 250px );
+    .we-pm-icon{
+        position: relative !important;
+        background-position: center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
     }
+
+    .we-pp{
+        position: relative !important;
+    }
+
+    #earth_div{top: 0; right: 0; bottom: 0; left: 0; position: absolute !important;}
 
     &__arrow{
         position: absolute; left:0; padding:10px;

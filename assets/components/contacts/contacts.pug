@@ -1,0 +1,23 @@
+mixin contacts()
+    +b.contacts
+        +e.slide
+            +e.slide-content
+                +e.SPAN.title контакты
+                +e.SPAN.description
+                +e.call-contact
+                    +e.call-contact-phone
+                        +e.call-contact-phone-item
+                            +e.call-contact-phone-image(src=require('./../images/a1.svg'), alt='A1')
+                            +e.A.call-contact-phone-link(href="") +375-29-124-99-99
+                        +e.call-contact-phone-item
+                            +e.call-contact-phone-image(src=require('./../images/a1.svg'), alt='A1')
+                            +e.A.call-contact-phone-link(href="") +375-29-124-99-99
+                    +e.call-contact-email
+                        +e.call-contact-phone-item
+                            +e.call-contact-phone-image(src=require('./../images/email.svg'), alt='A1')
+                            +e.A.call-contact-phone-link(href="") 1249999@rambler.ru
+                    +e.call-contact-clock
+                        +e.call-contact-phone-item
+                            +e.call-contact-phone-image(src=require('./../images/clock.svg'), alt='A1')
+                            +e.A.call-contact-phone-link 9:00 - 18:00 без выходных
+            +e.image(style=`background-image:url(${require("./../images/slider.png")})`)

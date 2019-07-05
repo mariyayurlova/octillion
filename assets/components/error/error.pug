@@ -1,0 +1,9 @@
+mixin error()
+    +b.error
+        +menu-inner()
+        +e.slide
+            +e.slide-content
+                +e.SPAN.title 404
+                +e.SPAN.description Страница не найдена
+                +e.P.text Нерпавильно набран номер, или такой страницы на сайте не существует. Начните с главной страницы или воспользуйтесь меню.
+            +e.image(style=`background-image:url(${require("./../images/slider.png")})`)
