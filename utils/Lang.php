@@ -44,6 +44,14 @@
                 'ru' => 'Контакты',
                 'en' => 'Contacts'
             ],
+            'Страница не найдена' => [
+                'ru' => 'Страница не найдена',
+                'en' => 'Page don\'t exist'
+            ],
+            '404 desc' => [
+                'ru' => 'Нерпавильно набран номер, или такой страницы на сайте не существует. Начните с главной страницы или воспользуйтесь меню.',
+                'en' => 'The number is dialed incorrectly, or there is no such page on the site. Start from the main page or use the menu.'
+            ],
 
 
         ];

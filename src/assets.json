@@ -1,1 +1,94 @@
-{"common":{"js":"/src/js/common.ed0a7fead88a836eacea.min.js","css":"/src/css/common.ed0a7fead88a836eacea.min.css"},"clients":{"js":"/src/js/clients.ed0a7fead88a836eacea.min.js","css":"/src/css/clients.ed0a7fead88a836eacea.min.css"},"contact":{"js":"/src/js/contact.ed0a7fead88a836eacea.min.js","css":"/src/css/contact.ed0a7fead88a836eacea.min.css"},"home":{"js":"/src/js/home.ed0a7fead88a836eacea.min.js","css":"/src/css/home.ed0a7fead88a836eacea.min.css"},"service":{"js":"/src/js/service.ed0a7fead88a836eacea.min.js"},"serviceSingle":{"js":"/src/js/serviceSingle.ed0a7fead88a836eacea.min.js"},"teamSingle":{"js":"/src/js/teamSingle.ed0a7fead88a836eacea.min.js"},"":{"html":["/src/clients.html","/src/contact.html","/src/home.html","/src/service.html","/src/serviceSingle.html","/src/teamSingle.html"],"woff":["/src/fonts/Gilroyextrabold.21bab4.woff","/src/fonts/Gilroylight.1b3910.woff"],"woff2":["/src/fonts/Gilroyextrabold.4e7357.woff2","/src/fonts/Gilroylight.b76241.woff2"],"ttf":["/src/fonts/Gilroyextrabold.cccee9.ttf","/src/fonts/Gilroylight.0e8ff4.ttf"],"png":["/src/icons/a1.ff9425.png","/src/icons/arr1.f26a7d.png","/src/icons/arr2.683c19.png","/src/icons/arrow-bread.a4defc.png","/src/icons/arrow.97bc1b.png","/src/icons/bull.e71b54.png","/src/icons/cl1.a639d4.png","/src/icons/cl2.03312c.png","/src/icons/cl3.f7718d.png","/src/icons/cl4.2f2ee0.png","/src/icons/cl5.998073.png","/src/icons/cl6.abd3e5.png","/src/icons/clock.f6b0af.png","/src/icons/email.7a8f02.png","/src/icons/eng.c9c529.png","/src/icons/news1.906aca.png","/src/icons/news2.110150.png","/src/icons/rus.13db31.png","/src/icons/slider.963cb9.png","/src/icons/team-1.35a776.png","/src/icons/telegram.c935f1.png","/src/icons/viber.581c25.png","/src/icons/whatsup.90680a.png"],"svg":["/src/icons/call.e04308.svg","/src/icons/desc.2d2bb1.svg","/src/icons/egg.85cddb.svg","/src/icons/fb.ffeb10.svg","/src/icons/in.578229.svg","/src/icons/inst.d2033d.svg","/src/icons/logo.559f92.svg","/src/icons/pdf.a16368.svg","/src/icons/vk.dd8ca6.svg"],"mp4":"/src/video/videoFon.1fd88c.mp4"}}
+{
+  "common": {
+    "js": "/src/js/common.bdd6e4f8a1b1de9063b8.min.js",
+    "css": "/src/css/common.bdd6e4f8a1b1de9063b8.min.css"
+  },
+  "clients": {
+    "js": "/src/js/clients.bdd6e4f8a1b1de9063b8.min.js",
+    "css": "/src/css/clients.bdd6e4f8a1b1de9063b8.min.css"
+  },
+  "contact": {
+    "js": "/src/js/contact.bdd6e4f8a1b1de9063b8.min.js",
+    "css": "/src/css/contact.bdd6e4f8a1b1de9063b8.min.css"
+  },
+  "error": {
+    "js": "/src/js/error.bdd6e4f8a1b1de9063b8.min.js",
+    "css": "/src/css/error.bdd6e4f8a1b1de9063b8.min.css"
+  },
+  "home": {
+    "js": "/src/js/home.bdd6e4f8a1b1de9063b8.min.js",
+    "css": "/src/css/home.bdd6e4f8a1b1de9063b8.min.css"
+  },
+  "service": {
+    "js": "/src/js/service.bdd6e4f8a1b1de9063b8.min.js"
+  },
+  "serviceSingle": {
+    "js": "/src/js/serviceSingle.bdd6e4f8a1b1de9063b8.min.js"
+  },
+  "teamSingle": {
+    "js": "/src/js/teamSingle.bdd6e4f8a1b1de9063b8.min.js"
+  },
+  "": {
+    "html": [
+      "/src/clients.html",
+      "/src/contact.html",
+      "/src/error.html",
+      "/src/home.html",
+      "/src/service.html",
+      "/src/serviceSingle.html",
+      "/src/teamSingle.html"
+    ],
+    "woff": [
+      "/src/fonts/Gilroyextrabold.21bab4.woff",
+      "/src/fonts/Gilroylight.1b3910.woff"
+    ],
+    "woff2": [
+      "/src/fonts/Gilroyextrabold.4e7357.woff2",
+      "/src/fonts/Gilroylight.b76241.woff2"
+    ],
+    "ttf": [
+      "/src/fonts/Gilroyextrabold.cccee9.ttf",
+      "/src/fonts/Gilroylight.0e8ff4.ttf"
+    ],
+    "svg": [
+      "/src/icons/a1.ed696b.svg",
+      "/src/icons/call.e04308.svg",
+      "/src/icons/clock.fcaab1.svg",
+      "/src/icons/desc.2d2bb1.svg",
+      "/src/icons/egg.85cddb.svg",
+      "/src/icons/email.425ec9.svg",
+      "/src/icons/fb.ffeb10.svg",
+      "/src/icons/in.578229.svg",
+      "/src/icons/inst.d2033d.svg",
+      "/src/icons/logo.559f92.svg",
+      "/src/icons/pdf.a16368.svg",
+      "/src/icons/vk.dd8ca6.svg"
+    ],
+    "png": [
+      "/src/icons/a1.ff9425.png",
+      "/src/icons/arr1.f26a7d.png",
+      "/src/icons/arr2.683c19.png",
+      "/src/icons/arrow-bread.a4defc.png",
+      "/src/icons/arrow.97bc1b.png",
+      "/src/icons/bull.e71b54.png",
+      "/src/icons/cl1.a639d4.png",
+      "/src/icons/cl2.03312c.png",
+      "/src/icons/cl3.f7718d.png",
+      "/src/icons/cl4.2f2ee0.png",
+      "/src/icons/cl5.998073.png",
+      "/src/icons/cl6.abd3e5.png",
+      "/src/icons/clock.f6b0af.png",
+      "/src/icons/email.7a8f02.png",
+      "/src/icons/eng.c9c529.png",
+      "/src/icons/news1.906aca.png",
+      "/src/icons/news2.110150.png",
+      "/src/icons/rus.13db31.png",
+      "/src/icons/slider.963cb9.png",
+      "/src/icons/team-1.35a776.png",
+      "/src/icons/telegram.c935f1.png",
+      "/src/icons/viber.581c25.png",
+      "/src/icons/whatsup.90680a.png"
+    ],
+    "mp4": "/src/video/videoFon.1fd88c.mp4"
+  }
+}

@@ -14,13 +14,14 @@ add_action('template_redirect', function () {
 
     add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script('commons', Assets::getJs('common'), false, null, true);
-//        wp_enqueue_script('myjquery', BASE_URL . "/src/jquery.js", false, null, true);
 
         wp_localize_script('commons_ajax', 'tikets_ajax', array('url' => admin_url('admin-ajax.php')));
 
         if (is_page_template('template-home.php')) {
             wp_enqueue_script('home', Assets::getJs('home'), false, null, true);
             wp_enqueue_script('service', Assets::getJs('service'), false, null, true);
+
+
         }
         if (is_page_template('template-contacts.php')) {
             wp_enqueue_script('contact', Assets::getJs('contact'), false, null, true);
@@ -37,9 +38,8 @@ add_action('template_redirect', function () {
         if (is_tax( 'service_group' )){
             wp_enqueue_script('service', Assets::getJs('service'), false, null, true);
         }
-//        else {
-////		    wp_enqueue_script('page', Assets::getJs('page'), false, null, true);
-//	    }
-//        wp_enqueue_script('lang', BASE_URL . "/utils/lang.js", ["jquery"], null, true);
+        if (is_404()){
+            wp_enqueue_script('error', Assets::getJs('error'), false, null, true);
+        }
     });
 });

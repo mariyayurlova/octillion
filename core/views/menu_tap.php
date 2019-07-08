@@ -16,6 +16,8 @@
                     </button>
                     <button class="menu__menu-item unbutton" id="team"><?= Lang::get("команда")?>
                     </button>
+                    <button class="menu__menu-item unbutton" id="about"><?= Lang::get("о компании")?>
+                    </button>
                     <button class="menu__menu-item unbutton" id="blog"><?= Lang::get("блог")?>
                     </button>
                     <button class="menu__menu-item unbutton" id="contact"><?= Lang::get("контакты")?>

@@ -16,6 +16,8 @@
                         <?= Lang::get("услуги")?></a>
                     <a class="menu-inner__menu-item unbutton" id="team" href="<?=get_home_url()?>#teamSection">
                         <?= Lang::get("команда")?></a>
+                    <a class="menu-inner__menu-item unbutton" id="about" href="<?=get_home_url()?>#aboutSection">
+                        <?= Lang::get("о компании")?></a>
                     <a class="menu-inner__menu-item unbutton" id="blog" href="<?=get_home_url()?>#blogSection">
                         <?= Lang::get("блог")?></a>
                     <a class="menu-inner__menu-item unbutton" id="contact" href="<?=get_home_url()?>#contactSection">

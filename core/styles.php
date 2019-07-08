@@ -32,6 +32,9 @@ add_action('template_redirect', function () {
         if (is_tax( 'service_group' )){
             wp_enqueue_style( 'service', Assets::getCss( 'service' ), false, null );
         }
+        if (is_404()){
+            wp_enqueue_style( 'error', Assets::getCss( 'error' ), false, null );
+        }
         wp_enqueue_style('style', BASE_URL . '/style.css', false, null);
 
     });

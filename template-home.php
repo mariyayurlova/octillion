@@ -22,11 +22,14 @@ get_template_part("/core/views/headerView")
                 <div class="homeSlider__slide-item section" id="teamSection">
                     <?php get_template_part("/core/views/homeTeam")?>
                 </div>
+                <div class="homeSlider__slide-item section" id="aboutSection">
+                    <?php get_template_part("/core/views/homeAbout")?>
+                </div>
                 <div class="homeSlider__slide-item section" id="blogSection">
                     <?php get_template_part("/core/views/homeBlog")?>
                 </div>
                 <div class="homeSlider__slide-item section" id="contactSection">
-                    <?php get_template_part("/core/views/homeAbout")?>
+                    <?php get_template_part("/core/views/homeContact")?>
                 </div>
             </div>
         </div>
