@@ -8,11 +8,13 @@
         $lang = Lang::LANGUAGES;
 		Container::make( 'post_meta', $lang[0])
 			->where( 'post_type', '=', 'page' )
+            ->where( 'post_template', '!=', 'template-home.php' )
 			->add_fields( [
                 Field::make( 'text', 'crb_page_name_'.$lang[0], 'Заголовок '.strtoupper($lang[0]) )->set_required( true ),
 			] );
         Container::make( 'post_meta', $lang[1])
             ->where( 'post_type', '=', 'page' )
+            ->where( 'post_template', '!=', 'template-home.php' )
             ->add_fields( [
                 Field::make( 'text', 'crb_page_name_'.$lang[1], 'Заголовок '.strtoupper($lang[1]) )->set_required( true ),
             ] );
