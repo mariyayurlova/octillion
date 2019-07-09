@@ -7,7 +7,7 @@
 	function crb_attach_contacts_meta(){
 		Container::make( 'post_meta', 'Контактная информация')
 			->where( 'post_type', '=', 'page' )
-			->where( 'post_template', '=', 'template-contacts.php' )
+			->where( 'post_template', '=', 'template-partners.php' )
 			->add_fields( [
 				Field::make( 'text', 'contact_address', 'Адрес' ),
 				Field::make( 'complex', 'crb_phones', 'Телефоны' )

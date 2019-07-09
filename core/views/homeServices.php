@@ -54,7 +54,7 @@ $terms = get_terms( [
                                                 $counter++;
                                                 ?>
                                                 <li class="services__slide-item">
-                                                    <a class="services__slide-link" href="<?php the_permalink()?>"><?= the_title()?></a>
+                                                    <a class="services__slide-link" href="<?= the_permalink().'?sg='.$term->term_id?>"><?= the_title()?></a>
                                                 </li>
                                             <?php
                                             endwhile;

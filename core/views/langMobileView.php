@@ -16,6 +16,8 @@ $ln = Lang::current();
     <div class="header__language mob">
         <?php foreach ($lang as $item) :
         $is_active = ($ln == $item) ? " lang__link_active" : "";
+            if ($item === Lang::current())
+                continue;
         ?>
         <a class="header__language-item <?= $is_active ?>"  data-lang="<?= $item ?>>
             <img class="header__language-image" src="<?=Lang::LANG_META[$item]['flag']?>" alt="A1" title=""/>

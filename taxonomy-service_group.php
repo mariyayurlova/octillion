@@ -23,6 +23,11 @@ get_template_part("/core/views/headerView");
                     <div class="breadcrubs">
                         <ul class="breadcrubs__list">
                             <li class="breadcrubs__item">
+                                <a class="breadcrubs__link" href="<?= get_home_url() ?>">
+                                    <?= Lang::get("главная") ?>
+                                </a>
+                            </li>
+                            <li class="breadcrubs__item">
                                 <a class="breadcrubs__link" href="<?= get_home_url() ?>#blogSection">
                                     <?= Lang::get("услуги") ?>
                                 </a>
@@ -67,7 +72,7 @@ get_template_part("/core/views/headerView");
                                                 ?>
                                                 <li class="service__service-about-content-item">
                                                     <a class="service__service-about-content-link"
-                                                       href="<?= get_permalink($row->ID) ?>">
+                                                       href="<?= get_permalink($row->ID).'?sg='.$current_term->term_id ?>">
                                                         <?= $row->post_title ?>
                                                     </a>
                                                 </li>

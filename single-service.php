@@ -5,7 +5,10 @@ $ln = Lang::current();
 $name = carbon_get_post_meta(get_the_ID(),"crb_service_name_".$ln);
 $content = carbon_get_post_meta(get_the_ID(),"crb_service_content_".$ln);
 
-get_template_part("/core/views/headerView")
+get_template_part("/core/views/headerView");
+if ($_GET['sg']){
+    $current_term = get_term_by('id',$_GET['sg'],'service_group');
+}
 ?>
     <main class="main">
         <div class="serviceSingle">
@@ -15,10 +18,22 @@ get_template_part("/core/views/headerView")
                     <p class="serviceSingle__title"><?= $name ?></p>
                     <div class="breadcrubs">
                         <ul class="breadcrubs__list">
-                            <li class="breadcrubs__item"><a class="breadcrubs__link" href=""><?= Lang::get("услуги")?></a>
-                            </li>
                             <li class="breadcrubs__item">
-                                <slag class="breadcrubs__link" ><?= $name ?></slag>
+                                <a class="breadcrubs__link" href="<?= get_home_url() ?>">
+                                    <?= Lang::get("главная") ?>
+                                </a>
+                            </li>
+                            <li class="breadcrubs__item"><a class="breadcrubs__link" href="<?=get_home_url()?>#servicesSection"><?= Lang::get("услуги")?></a>
+                            </li>
+                            <?php
+                            if (!empty($current_term)):
+                                $term_name = $ln == 'ru' ? $current_term->name : carbon_get_term_meta($current_term->term_id,'group_name_'.$ln);
+                                ?>
+                                <li class="breadcrubs__item"><a class="breadcrubs__link" href="<?=get_term_link($current_term->term_id)?>"><?= $term_name ?></a>
+                                </li>
+                            <?php endif;?>
+                            <li class="breadcrubs__item">
+                                <span class="breadcrubs__link" ><?= $name ?></span>
                             </li>
                         </ul>
                     </div>

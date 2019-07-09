@@ -1,20 +1,20 @@
 <?php
 /**
- * Template Name: Clients Template
+ * Template Name: Partners Template
  */
 get_header();
-
 $ln = Lang::current();
-$clients = carbon_get_post_meta(get_the_ID(), "crb_clients");
 $title = carbon_get_post_meta(get_the_ID(), 'crb_page_name_'.$ln);
 $title = !empty($title)? $title : get_the_title(get_the_ID());
-get_template_part('/core/views/headerView'); ?>
+get_template_part('/core/views/headerView');
+?>
+<SCRIPT src="http://www.webglearth.com/v2/api.js"></SCRIPT>
 <main class="main">
-    <div class="clients">
+    <div class="contact">
         <?php get_template_part("/core/views/single_menu_tap") ?>
-        <div class="container type-clients">
+        <div class="container type-contact">
             <div class="container">
-                <p class="clients__title"><?= $title ?></p>
+                <p class="contact__title"><?= $title ?></p>
                 <div class="breadcrubs">
                     <ul class="breadcrubs__list">
                         <li class="breadcrubs__item">
@@ -32,21 +32,10 @@ get_template_part('/core/views/headerView'); ?>
                         </li>
                     </ul>
                 </div>
-                <div class="clients__clients-about">
-                    <div class="clients__clients-about-content">
-                        <?php foreach ($clients as $client) :
-                        $link = $client["client_link"];
-                        $img = $client["client_logo"];
-                        if (!empty($link)):
-                        ?>
-                            <a class="clients__clients-item" href="<?= esc_url($link)?>">
-                                <img class="clients__clients-image" src="<?= $img?>" alt="A1" title=""/>
-                            </a>
-                            <?php else:?>
-                            <span class="clients__clients-item" >
-                                <img class="clients__clients-image" src="<?= $img?>" alt="A1" title=""/>
-                            </span>
-                        <?php endif; endforeach; ?>
+                <div class="contact__contact-about">
+                    <div class="contact__contact-about-content">
+                        <div class="contact__globus" id="earth_div">
+                        </div>
                     </div>
                 </div>
             </div>

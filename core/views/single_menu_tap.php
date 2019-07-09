@@ -9,20 +9,7 @@
     <div class="container">
         <div class="menu-inner__menu">
             <div class="container">
-                <div class="menu-inner__menu-list">
-                    <a class="menu-inner__menu-item unbutton menu-inner__menu-item menu-inner__menu-item_active" id="home" href="<?=get_home_url()?>#homeSection">
-                        <?= Lang::get("главная")?></a>
-                    <a class="menu-inner__menu-item unbutton" id="services" href="<?=get_home_url()?>#servicesSection">
-                        <?= Lang::get("услуги")?></a>
-                    <a class="menu-inner__menu-item unbutton" id="team" href="<?=get_home_url()?>#teamSection">
-                        <?= Lang::get("команда")?></a>
-                    <a class="menu-inner__menu-item unbutton" id="about" href="<?=get_home_url()?>#aboutSection">
-                        <?= Lang::get("о компании")?></a>
-                    <a class="menu-inner__menu-item unbutton" id="blog" href="<?=get_home_url()?>#blogSection">
-                        <?= Lang::get("блог")?></a>
-                    <a class="menu-inner__menu-item unbutton" id="contact" href="<?=get_home_url()?>#contactSection">
-                        <?= Lang::get("контакты")?></a>
-                </div>
+                <?php mainMenuSinglePage(); ?>
                 <ul class="menu-inner__menu-soc">
                     <li class="menu__menu-soc-item">
                         <a class="menu__menu-soc-link" href="<?=esc_url($fb)?>">

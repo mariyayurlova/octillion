@@ -8,21 +8,7 @@
     <div class="container">
         <div class="menu__menu">
             <div class="container">
-                <div class="menu__menu-list">
-                    <button class="menu__menu-item unbutton menu__menu-item menu__menu-item_active"
-                            id="home"><?= Lang::get("главная")?>
-                    </button>
-                    <button class="menu__menu-item unbutton" id="services"><?= Lang::get("услуги")?>
-                    </button>
-                    <button class="menu__menu-item unbutton" id="team"><?= Lang::get("команда")?>
-                    </button>
-                    <button class="menu__menu-item unbutton" id="about"><?= Lang::get("о компании")?>
-                    </button>
-                    <button class="menu__menu-item unbutton" id="blog"><?= Lang::get("блог")?>
-                    </button>
-                    <button class="menu__menu-item unbutton" id="contact"><?= Lang::get("контакты")?>
-                    </button>
-                </div>
+                <?php mainMenu(); ?>
                 <ul class="menu__menu-soc">
                     <li class="menu__menu-soc-item">
                         <a class="menu__menu-soc-link" href="<?=esc_url($fb)?>">

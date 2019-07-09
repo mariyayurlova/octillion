@@ -1,43 +1,61 @@
 <?php
-	/**
-	 * Created by PhpStorm.
-	 * User: alexandrzanko
-	 * Date: 10/17/18
-	 * Time: 3:07 PM
-	 */
-	
 	
 	if (!defined( 'ABSPATH' )) {
 		exit();
 	}
 	
-	add_filter( 'nav_menu_css_class', 'change_class_tag_li', 1, 3 );
-	
-	function change_class_tag_li($classes, $item, $args){
-		if ($args->theme_location === 'main_menu') {
-			if ($item->menu_item_parent == 0) {
-				$classes[] = 'header__menu-item';
-				if (in_array( 'current-menu-item', $classes ) || in_array( 'current-menu-parent', $classes )) {
-					$classes[] = 'header__menu-item_active';
-				}
-			} else {
-				$classes[] = 'header__sub-menu-item';
-				if (in_array( 'current-menu-item', $classes )) {
-					$classes[] = 'header__sub-menu-item_active';
-				}
-			}
-			
-		}
-		return $classes;
-	}
-	
-	//change classes  submenu
-	add_filter( 'nav_menu_submenu_css_class', 'change_wp_nav_menu', 10, 3 );
-	function change_wp_nav_menu($classes, $args, $depth){
-		foreach($classes as $key => $class) {
-			if ($class == 'sub-menu') {
-				$classes[ $key ] = 'header__sub-menu-list';
-			}
-		}
-		return $classes;
-	}
+    function mainMenu(){
+        ?>
+            <div class="menu__menu-list">
+                <button class="menu__menu-item unbutton menu__menu-item_active" id="home"><?= Lang::get("главная")?>
+                </button>
+                <button class="menu__menu-item unbutton" id="services"><?= Lang::get("услуги")?>
+                </button>
+                <button class="menu__menu-item unbutton" id="team"><?= Lang::get("команда")?>
+                </button>
+                <button class="menu__menu-item unbutton" id="about"><?= Lang::get("о компании")?>
+                </button>
+                <button class="menu__menu-item unbutton" id="blog"><?= Lang::get("блог")?>
+                </button>
+                <button class="menu__menu-item unbutton" id="contact"><?= Lang::get("контакты")?>
+                </button>
+            </div>
+        <?php
+    }
+	function mainMenuSinglePage(){
+        ?>
+        <div class="menu-inner__menu-list">
+            <a class="menu-inner__menu-item unbutton menu-inner__menu-item menu-inner__menu-item_active" id="home" href="<?=get_home_url()?>#homeSection">
+                <?= Lang::get("главная")?></a>
+            <a class="menu-inner__menu-item unbutton" id="services" href="<?=get_home_url()?>#servicesSection">
+                <?= Lang::get("услуги")?></a>
+            <a class="menu-inner__menu-item unbutton" id="team" href="<?=get_home_url()?>#teamSection">
+                <?= Lang::get("команда")?></a>
+            <a class="menu-inner__menu-item unbutton" id="about" href="<?=get_home_url()?>#aboutSection">
+                <?= Lang::get("о компании")?></a>
+            <a class="menu-inner__menu-item unbutton" id="blog" href="<?=get_home_url()?>#blogSection">
+                <?= Lang::get("блог")?></a>
+            <a class="menu-inner__menu-item unbutton" id="contact" href="<?=get_home_url()?>#contactSection">
+                <?= Lang::get("контакты")?></a>
+        </div>
+        <?php
+    }
+	function headerMenu(){
+        ?>
+            <div class="header__menu-list">
+                <button class="header__menu-item unbutton header__menu-item_active" id="home">
+                    <?= Lang::get("главная")?>
+                </button>
+                <button class="header__menu-item unbutton" id="services"><?= Lang::get("услуги")?>
+                </button>
+                <button class="header__menu-item unbutton" id="team"><?= Lang::get("команда")?>
+                </button>
+                <button class="header__menu-item unbutton" id="about"><?= Lang::get("о компании")?>
+                </button>
+                <button class="header__menu-item unbutton" id="blog"><?= Lang::get("блог")?>
+                </button>
+                <button class="header__menu-item unbutton" id="contact"><?= Lang::get("контакты")?>
+                </button>
+            </div>
+        <?php
+    }

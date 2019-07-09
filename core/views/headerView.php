@@ -23,21 +23,7 @@
         </div>
         <div class="header__menu">
             <div class="container">
-                <div class="header__menu-list">
-                    <button class="header__menu-item unbutton header__menu-item header__menu-item_active" id="home">
-                        <?= Lang::get("главная")?>
-                    </button>
-                    <button class="header__menu-item unbutton" id="services"><?= Lang::get("услуги")?>
-                    </button>
-                    <button class="header__menu-item unbutton" id="team"><?= Lang::get("команда")?>
-                    </button>
-                    <button class="header__menu-item unbutton" id="about"><?= Lang::get("о компании")?>
-                    </button>
-                    <button class="header__menu-item unbutton" id="blog"><?= Lang::get("блог")?>
-                    </button>
-                    <button class="header__menu-item unbutton" id="contact"><?= Lang::get("контакты")?>
-                    </button>
-                </div>
+                <?php headerMenu()?>
                 <ul class="header__menu-soc">
                     <li class="header__menu-soc-item">
                         <a class="header__menu-soc-link" href="<?= $crb_fb_link?>">

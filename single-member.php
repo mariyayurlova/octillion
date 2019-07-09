@@ -4,6 +4,7 @@ $ln = Lang::current();
 
 $home_page = get_option( 'page_on_front' );
 $members = carbon_get_post_meta($home_page,"member_list");
+$name = carbon_get_post_meta(get_the_ID(), "crb_member_name_" . $ln);
 get_template_part("/core/views/headerView")
 ?>
     <main class="main">
@@ -12,6 +13,23 @@ get_template_part("/core/views/headerView")
             <div class="container type-team">
                 <p class="teamSingle__title"><?= Lang::get("команда") ?></p>
                 <?php get_template_part("/core/views/prevNextPartner") ?>
+                <div class="breadcrubs">
+                    <ul class="breadcrubs__list">
+                        <li class="breadcrubs__item">
+                            <a class="breadcrubs__link" href="<?= get_home_url() ?>">
+                                <?= Lang::get("главная") ?>
+                            </a>
+                        </li>
+                        <li class="breadcrubs__item">
+                            <a class="breadcrubs__link" href="<?= get_home_url()?>#teamSection">
+                                <?= Lang::get("команда") ?>
+                            </a>
+                        </li>
+                        <li class="breadcrubs__item">
+                            <span class="breadcrubs__link" ><?= $name ?></span>
+                        </li>
+                    </ul>
+                </div>
                 <div class="container">
                     <div class="teamSingle__team-about">
                         <div class="teamSingle__team-about-content">

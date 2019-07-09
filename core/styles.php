@@ -17,7 +17,7 @@ add_action('template_redirect', function () {
         if ( is_page_template( 'template-home.php' ) ) {
             wp_enqueue_style( 'home', Assets::getCss( 'home' ), false, null );
         }
-        if (is_page_template('template-contacts.php')) {
+        if (is_page_template('template-partners.php')) {
             wp_enqueue_style( 'contact', Assets::getCss( 'contact' ), false, null );
         }
         if (is_page_template('template-clients.php')) {
@@ -30,6 +30,7 @@ add_action('template_redirect', function () {
             wp_enqueue_style( 'serviceSingle', Assets::getCss( 'serviceSingle' ), false, null );
         }
         if (is_tax( 'service_group' )){
+            wp_enqueue_style( 'serviceSingle', Assets::getCss( 'serviceSingle' ), false, null );
             wp_enqueue_style( 'service', Assets::getCss( 'service' ), false, null );
         }
         if (is_404()){

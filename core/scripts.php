@@ -20,10 +20,8 @@ add_action('template_redirect', function () {
         if (is_page_template('template-home.php')) {
             wp_enqueue_script('home', Assets::getJs('home'), false, null, true);
             wp_enqueue_script('service', Assets::getJs('service'), false, null, true);
-
-
         }
-        if (is_page_template('template-contacts.php')) {
+        if (is_page_template('template-partners.php')) {
             wp_enqueue_script('contact', Assets::getJs('contact'), false, null, true);
         }
         if (is_page_template('template-clients.php')) {
