@@ -21,7 +21,7 @@ $( "#blog.menu__menu-item" ).click(function() {
     });
 });
 
-$( "#blog.header__menu-item" ).click(function() {
+$( "#blogMobile.header__menu-item" ).click(function() {
     $('.blog__about-item').each(function(i){
         var row = $(this);
         setTimeout(function() {

@@ -56,7 +56,7 @@ $( "#team.menu__menu-item" ).click(function() {
     console.log("done");
 });
 
-$( "#team.header__menu-item" ).click(function() {
+$( "#teamMobile.header__menu-item" ).click(function() {
     $('.team__slide').each(function(i){
         var row = $(this);
         setTimeout(function() {

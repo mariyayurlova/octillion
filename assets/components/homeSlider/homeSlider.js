@@ -12,7 +12,25 @@ function paddingResize() {
 }
 
 
+
 $(document).ready(function () {
+
+    let currentLocation = window.location.hash;
+
+    if(currentLocation.length<=0 || currentLocation.length==1){
+        $("#homeSection").addClass("homeSlider__slide-item_active");
+    }
+
+    else {
+        var str = currentLocation;
+        str = str.replace('Section', '');
+        $(str).click();
+    }
+
+
+
+
+    console.log(currentLocation);
 
     var swiper = new Swiper('.homeSlider__container', {
         pagination: {
@@ -64,7 +82,7 @@ $(document).ready(function () {
 
 
 
-$("#homeSection").addClass("homeSlider__slide-item_active");
+
 
 
 $(".menu__menu-item").click(function(){
@@ -95,9 +113,11 @@ $(".menu-inner__menu-item").click(function(){
 $(".header__menu-item").click(function(){
 
     var menuId = $(this).attr("id");
-    var test =  $('li[data-id=menuId]');
+    var str2 = menuId;
+    str2 = str2.replace('Mobile', '');
+    var test =  $('li[data-id=str2]');
     $(".section").removeClass("homeSlider__slide-item_active");
-    $('#' + menuId + 'Section').addClass("homeSlider__slide-item_active");
+    $('#' + str2 + 'Section').addClass("homeSlider__slide-item_active");
     $(".header__menu-item").removeClass("header__menu-item_active");
     $(this).addClass("header__menu-item_active");
     $(".header__burger").click();

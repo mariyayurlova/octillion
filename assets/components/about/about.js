@@ -25,7 +25,7 @@ $( "#about.menu__menu-item" ).click(function() {
     });
 });
 
-$( "#about.header__menu-item" ).click(function() {
+$( "#aboutMobile.header__menu-item" ).click(function() {
     $('.about__slide').each(function(i){
         var row = $(this);
         setTimeout(function() {

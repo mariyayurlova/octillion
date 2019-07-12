@@ -45,7 +45,7 @@ $( "#services.menu__menu-item" ).click(function() {
     console.log("done");
 });
 
-$( "#services.header__menu-item" ).click(function() {
+$( "#servicesMobile.header__menu-item" ).click(function() {
     $('.services__slide').each(function(i){
         var row = $(this);
         setTimeout(function() {

@@ -5,7 +5,7 @@ mixin header()
                 +e.A.logo-content(href="")
                     +e.logo(src=require('./../images/logo.svg'), alt='Logo')
                     +e.logo-desc(src=require('./../images/desc.svg'), alt='Description')
-                +e.call
+                +e.call(id="test")
                     +e.call-image(src=require('./../images/call.svg'), alt='Call')
                     +e.call-content
                         +e.call-social
@@ -51,12 +51,12 @@ mixin header()
             +e.menu
                 .container
                     +e.menu-list
-                        +e.BUTTON.menu-item.unbutton.header__menu-item_active(id="home") главная
-                        +e.BUTTON.menu-item.unbutton(id="services") услуги
-                        +e.BUTTON.menu-item.unbutton(id="team") команда
-                        +e.BUTTON.menu-item.unbutton(id="about") о компании
-                        +e.BUTTON.menu-item.unbutton(id="blog") блог
-                        +e.BUTTON.menu-item.unbutton(id="contact") контакты
+                        +e.BUTTON.menu-item.unbutton.header__menu-item_active(id="homeMobile") главная
+                        +e.BUTTON.menu-item.unbutton(id="servicesMobile") услуги
+                        +e.BUTTON.menu-item.unbutton(id="teamMobile") команда
+                        +e.BUTTON.menu-item.unbutton(id="aboutMobile") о компании
+                        +e.BUTTON.menu-item.unbutton(id="blogMobile") блог
+                        +e.BUTTON.menu-item.unbutton(id="contactMobile") контакты
                     +e.UL.menu-soc
                         +e.LI.menu-soc-item
                             +e.A.menu-soc-link(href="")
