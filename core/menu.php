@@ -43,18 +43,18 @@
 	function headerMenu(){
         ?>
             <div class="header__menu-list">
-                <button class="header__menu-item unbutton header__menu-item_active" id="home">
+                <button class="header__menu-item unbutton header__menu-item_active" id="homeMobile">
                     <?= Lang::get("главная")?>
                 </button>
-                <button class="header__menu-item unbutton" id="services"><?= Lang::get("услуги")?>
+                <button class="header__menu-item unbutton" id="servicesMobile"><?= Lang::get("услуги")?>
                 </button>
-                <button class="header__menu-item unbutton" id="team"><?= Lang::get("команда")?>
+                <button class="header__menu-item unbutton" id="teamMobile"><?= Lang::get("команда")?>
                 </button>
-                <button class="header__menu-item unbutton" id="about"><?= Lang::get("о компании")?>
+                <button class="header__menu-item unbutton" id="aboutMobile"><?= Lang::get("о компании")?>
                 </button>
-                <button class="header__menu-item unbutton" id="blog"><?= Lang::get("блог")?>
+                <button class="header__menu-item unbutton" id="blogMobile"><?= Lang::get("блог")?>
                 </button>
-                <button class="header__menu-item unbutton" id="contact"><?= Lang::get("контакты")?>
+                <button class="header__menu-item unbutton" id="contactMobile"><?= Lang::get("контакты")?>
                 </button>
             </div>
         <?php
